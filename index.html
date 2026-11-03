@@ -19,21 +19,19 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Martin92yt — Développeur TypeScript">
   <meta property="og:description" content="Développeur français, TypeScript avant tout. Projets open source, compétences, outils, et contact direct sur Discord.">
-  <meta property="og:image" content="images/avatar.gif">
+  <meta property="og:image" content="images/avatar.jpg">
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
   <meta property="og:image:alt" content="Avatar de Martin92yt">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Martin92yt — Développeur TypeScript">
   <meta name="twitter:description" content="Développeur français, TypeScript avant tout. Projets open source, compétences, outils, et contact direct sur Discord.">
-  <meta name="twitter:image" content="images/avatar.gif">
-
-  <meta name="google-site-verification" content="UCIfnozSXgxJl6ccFCQ9pNokWLAXztXh-6keGxJ2_5U" />
+  <meta name="twitter:image" content="images/avatar.jpg">
 
   <!-- Favicon = avatar Discord. Pour plus de fiabilité, télécharge l'image, enregistre-la
        sous favicon.png dans le dossier du site et remplace les deux href ci-dessous par "favicon.png". -->
-  <link rel="icon" type="image/jpeg" href="images/avatar.gif">
-  <link rel="apple-touch-icon" href="images/avatar.gif">
+  <link rel="icon" type="image/jpeg" href="images/avatar.jpg">
+  <link rel="apple-touch-icon" href="images/avatar.jpg">
 
   <!-- Polices (facultatif : le site reste lisible sans, avec les polices de secours) -->
 
@@ -106,7 +104,7 @@
     <a class="brand" href="#top" aria-label="Martin92yt — accueil" title="Martin92yt · Français">
       <span class="brand-avatar">
         <img
-          src="images/avatar.gif"
+          src="images/avatar.jpg"
           alt=""
           width="44" height="44"
           decoding="async"
@@ -130,6 +128,7 @@
       <a href="#passions">Passions</a>
       <a href="#reseaux">Réseaux</a>
       <a href="#discord">Contact</a>
+      <a href="setup.html" class="nav-page">Setup</a>
     </nav>
 
     <a class="menu-backdrop" href="#menu-closed" aria-label="Fermer le menu" tabindex="-1"></a>
@@ -177,7 +176,7 @@
               <path d="M82 34c6-10 30-12 38 0" />
             </svg>
             <img
-              src="images/avatar.gif"
+              src="images/avatar.jpg"
               alt="Avatar de Martin92yt"
               width="512" height="512"
               fetchpriority="high"
@@ -273,12 +272,43 @@
       <header class="section-head reveal">
         <p class="hand kicker">ce que j'ai construit</p>
         <h2>Projets</h2>
-        <p class="section-sub">Deux réalisations, présentées honnêtement : une librairie open source mise en pause, et le site que tu es en train de lire.</p>
+        <p class="section-sub">Trois réalisations, présentées honnêtement : une API communautaire en ligne, le site que tu es en train de lire, et une librairie open source mise en pause.</p>
       </header>
 
       <div class="projects">
 
+        <!-- ========== PROJET : Gifuto ==========
+             Pour ajouter un projet : copie un <article class="card">…</article> complet. -->
         <article class="card card-1 card-wide reveal">
+          <span class="tape"></span>
+          <span class="stamp hand" aria-label="Statut : nouveau projet, en ligne">nouveau · en ligne</span>
+          <div class="preview" aria-hidden="true">
+            <div class="win"><i></i><i></i><i></i></div>
+            <div class="terminal"><span class="prompt">/</span>hug<span class="cmd">/kiss</span><span class="cmd">/pat</span><span class="caret"></span></div>
+          </div>
+          <div class="card-body">
+            <p class="tags"><span>Express.js</span><span>TypeScript</span><span>Prisma</span><span>EJS</span><span>Neon PostgreSQL</span></p>
+            <h3>Gifuto</h3>
+            <p>API REST et indexeur communautaire de GIFs d'anime, pensé pour les bots Discord et les projets web. Une plateforme performante pour soumettre, indexer et catégoriser des GIFs, utilisables dans des commandes d'interaction comme <code>/hug</code>, <code>/kiss</code> ou <code>/pat</code>.</p>
+            <div class="card-links">
+              <a href="https://gifuto.vercel.app" target="_blank" rel="noopener"><svg class="ico"><use href="#i-arrow"/></svg> Voir le site</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card-2 reveal">
+          <span class="tape"></span>
+          <div class="preview" aria-hidden="true">
+            <div class="win"><i></i><i></i><i></i></div>
+            <div class="skeleton skeleton-2"><b></b><b></b><b class="s"></b></div>
+          </div>
+          <p class="tags"><span>HTML5</span><span>CSS3</span><span>Vercel</span></p>
+          <h3>Ce portfolio</h3>
+          <p>Portfolio personnel sur-mesure, développé en HTML/CSS pur, axé sur le minimalisme et la performance.</p>
+          <p class="hand here">(oui, c'est ce site)</p>
+        </article>
+
+        <article class="card card-3 card-wide card-full reveal">
           <span class="tape"></span>
           <span class="stamp hand" aria-label="Statut : en pause, archivé">en pause · archivé</span>
           <div class="preview" aria-hidden="true">
@@ -294,18 +324,6 @@
               <a href="https://www.npmjs.com/package/dragons-of-legends.js" target="_blank" rel="noopener"><svg class="ico"><use href="#i-npm"/></svg> Voir sur NPM</a>
             </div>
           </div>
-        </article>
-
-        <article class="card card-2 reveal">
-          <span class="tape"></span>
-          <div class="preview" aria-hidden="true">
-            <div class="win"><i></i><i></i><i></i></div>
-            <div class="skeleton skeleton-2"><b></b><b></b><b class="s"></b></div>
-          </div>
-          <p class="tags"><span>HTML5</span><span>CSS3</span><span>Vercel</span></p>
-          <h3>Ce portfolio</h3>
-          <p>Portfolio personnel sur-mesure, développé en HTML/CSS pur, axé sur le minimalisme et la performance.</p>
-          <p class="hand here">(oui, c'est ce site)</p>
         </article>
 
       </div>
@@ -464,7 +482,7 @@
       <a class="brand brand-sm" href="#top" aria-label="Martin92yt — haut de page">
         <span class="brand-avatar">
           <img
-            src="images/avatar.gif"
+            src="images/avatar.jpg"
             alt=""
             width="38" height="38"
             loading="lazy"
@@ -485,6 +503,7 @@
       <a href="#passions">Passions</a>
       <a href="#reseaux">Réseaux</a>
       <a href="#discord">Contact</a>
+      <a href="setup.html">Setup (matériel)</a>
     </nav>
 
     <!-- id utilisé comme point de retour quand on ferme une fenêtre légale -->

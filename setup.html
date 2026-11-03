@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Setup — Martin92yt</title>
+  <meta name="description" content="Le matériel de Martin92yt : PC fixe, PC portables, écran, clavier, souris, casque et micro.">
+  <meta name="theme-color" content="#18181B">
+  <meta name="author" content="Martin92yt">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Martin92yt">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Setup — Martin92yt">
+  <meta property="og:description" content="Le matériel de Martin92yt : PC fixe, PC portables et périphériques.">
+  <meta property="og:image" content="images/avatar.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/jpeg" href="images/avatar.jpg">
+  <link rel="apple-touch-icon" href="images/avatar.jpg">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  MODE D'EMPLOI : MODIFIER LE MATÉRIEL SANS RIEN CASSER           ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  Tout se passe dans <main>, à 3 endroits seulement :             ║
+  ║                                                                  ║
+  ║  1) UNE LIGNE de caractéristiques (dans une fiche PC) :          ║
+  ║       <div><dt>Processeur</dt><dd>Mon CPU</dd></div>             ║
+  ║     → modifier le texte, ou supprimer / copier la ligne.         ║
+  ║     Pour un détail en petit sous la valeur :                     ║
+  ║       <dd>Mon CPU <small>détail</small></dd>                     ║
+  ║                                                                  ║
+  ║  2) UNE FICHE PC (<article class="rig">…</article>) :            ║
+  ║     → copier un bloc complet pour ajouter une machine,           ║
+  ║       le supprimer en entier pour l'enlever.                     ║
+  ║     Un modèle prêt à copier est en commentaire sous chaque       ║
+  ║     section.                                                     ║
+  ║                                                                  ║
+  ║  3) UNE LIGNE d'accessoire (<li>…</li> dans un tiroir) :         ║
+  ║     → copier / supprimer le <li>. Un tiroir = un <article>.      ║
+  ║                                                                  ║
+  ║  Les décalages, rotations et animations s'ajustent seuls :       ║
+  ║  on peut ajouter ou retirer autant d'éléments qu'on veut.        ║
+  ║                                                                  ║
+  ║  AVANT DE PUBLIER : chercher (Ctrl+F) « À renseigner » dans ce   ║
+  ║  fichier. Il ne doit plus rester aucun résultat.                 ║
+  ║                                                                  ║
+  ║  Icônes disponibles pour les accessoires (#nom) :                ║
+  ║  i-monitor i-keyboard i-mouse i-pad i-headset i-mic i-speaker    ║
+  ║  i-webcam i-gamepad i-laptop i-tower i-chip i-gpu i-ram i-disk   ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+
+<!-- ============ SPRITE D'ICÔNES DESSINÉES À LA MAIN ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+    </filter>
+
+    <symbol id="flag-fr" viewBox="0 0 30 20"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#EF4135"/></symbol>
+
+    <!-- Machines -->
+    <symbol id="i-tower" viewBox="0 0 48 48"><rect x="13" y="5" width="22" height="38" rx="3"/><path d="M19 12h10M19 17h10"/><circle cx="24" cy="32" r="5"/><path d="M24 29.5v3"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 48 48"><path d="M9 31V12a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2v19"/><path d="M9 31h30M4 37h40l-2.5 3h-35z"/></symbol>
+
+    <!-- Composants -->
+    <symbol id="i-chip" viewBox="0 0 48 48"><rect x="12" y="12" width="24" height="24" rx="3"/><rect x="19" y="19" width="10" height="10" rx="1.5"/><path d="M18 6v6M24 6v6M30 6v6M18 36v6M24 36v6M30 36v6M6 18h6M6 24h6M6 30h6M36 18h6M36 24h6M36 30h6"/></symbol>
+    <symbol id="i-gpu" viewBox="0 0 48 48"><rect x="4" y="12" width="40" height="22" rx="3"/><circle cx="17" cy="23" r="6"/><circle cx="33" cy="23" r="6"/><path d="M9 34v5M17 34v5"/></symbol>
+    <symbol id="i-ram" viewBox="0 0 48 48"><rect x="4" y="13" width="40" height="17" rx="2"/><path d="M10 20h5M21 20h5M32 20h5M9 30v6M16 30v6M23 30v6M30 30v6M37 30v6"/></symbol>
+    <symbol id="i-disk" viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="22" rx="3"/><path d="M12 29h12M34 29h.1M34 22h.1"/></symbol>
+
+    <!-- Périphériques -->
+    <symbol id="i-monitor" viewBox="0 0 48 48"><rect x="5" y="8" width="38" height="25" rx="3"/><path d="M18 42h12M24 33v9"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 48 48"><rect x="4" y="13" width="40" height="22" rx="4"/><path d="M10 20h.1M16 20h.1M22 20h.1M28 20h.1M34 20h.1M38 20h.1M10 27h.1M38 27h.1M16 28h16"/></symbol>
+    <symbol id="i-mouse" viewBox="0 0 48 48"><rect x="14" y="6" width="20" height="36" rx="10"/><path d="M24 6v13M14 19h20"/></symbol>
+    <symbol id="i-pad" viewBox="0 0 48 48"><rect x="4" y="12" width="40" height="24" rx="6"/><path d="M12 28c6-8 10 4 24-4"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 48 48"><path d="M9 28v-4a15 15 0 0 1 30 0v4"/><rect x="6" y="26" width="8" height="13" rx="3"/><rect x="34" y="26" width="8" height="13" rx="3"/><path d="M38 39c0 4-4 5-9 5"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 48 48"><rect x="17" y="5" width="14" height="24" rx="7"/><path d="M11 24c0 8 5 13 13 13s13-5 13-13M24 37v7M17 44h14"/></symbol>
+    <symbol id="i-speaker" viewBox="0 0 48 48"><rect x="11" y="5" width="26" height="38" rx="4"/><circle cx="24" cy="16" r="3.5"/><circle cx="24" cy="31" r="7"/></symbol>
+    <symbol id="i-webcam" viewBox="0 0 48 48"><circle cx="24" cy="19" r="12"/><circle cx="24" cy="19" r="4.5"/><path d="M14 44h20M24 31v13"/></symbol>
+    <symbol id="i-gamepad" viewBox="0 0 48 48"><path d="M13 15h22a8 8 0 0 1 8 8l2 11a5 5 0 0 1-9 3l-4-6H16l-4 6a5 5 0 0 1-9-3l2-11a8 8 0 0 1 8-8z"/><path d="M15 22v6M12 25h6M32 22h.1M36 26h.1"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#top">Aller au contenu</a>
+<div class="progress" aria-hidden="true"></div>
+
+<!-- ============ HEADER (identique à index.html, liens vers l'accueil) ============ -->
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="Martin92yt — accueil" title="Martin92yt · Français">
+      <span class="brand-avatar">
+        <img src="images/avatar.jpg" alt="" width="44" height="44" decoding="async">
+        <svg class="flag" role="img" aria-label="Drapeau français"><use href="#flag-fr"/></svg>
+      </span>
+      <span class="brand-name">Martin92yt</span>
+    </a>
+
+    <span id="menu" class="menu-anchor" aria-hidden="true"></span>
+    <span id="menu-closed" class="menu-anchor" aria-hidden="true"></span>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html#a-propos">À propos</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="index.html#outils">Outils</a>
+      <a href="index.html#projets">Projets</a>
+      <a href="index.html#passions">Passions</a>
+      <a href="index.html#reseaux">Réseaux</a>
+      <a href="index.html#discord">Contact</a>
+      <a href="setup.html" class="nav-page" aria-current="page">Setup</a>
+    </nav>
+
+    <a class="menu-backdrop" href="#menu-closed" aria-label="Fermer le menu" tabindex="-1"></a>
+    <a class="burger burger-open" href="#menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></a>
+    <a class="burger burger-close" href="#menu-closed" aria-label="Fermer le menu"><span></span><span></span></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ INTRO ============ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="hand kicker">mon matériel</p>
+      <h1>Mon <em>setup</em></h1>
+      <p class="lead">Les machines et le matériel que j'utilise au quotidien pour coder, jouer et explorer.</p>
+    </div>
+  </section>
+
+  <!-- ============ PC FIXE & PORTABLES ============ -->
+  <section id="machines" class="section">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="hand kicker">sous le capot</p>
+        <h2>PC &amp; portables</h2>
+        <p class="section-sub">Les machines sur lesquelles je travaille, avec leurs composants.</p>
+      </header>
+
+      <div class="rigs">
+
+        <!-- ========== FICHE PC FIXE ==========
+             class="rig rig-wide" = fiche sur toute la largeur (2 colonnes de caractéristiques).
+             Retire "rig-wide" pour une fiche normale, à côté d'une autre. -->
+        <article class="rig rig-wide reveal">
+          <span class="tape"></span>
+          <span class="stamp hand">PC principal</span>
+          <header class="rig-head">
+            <span class="tool-ico rig-ico"><svg class="ico"><use href="#i-tower"/></svg></span>
+            <div>
+              <h3>Mon PC fixe</h3>
+              <p class="rig-sub">Tour · À renseigner (usage, année…)</p>
+            </div>
+          </header>
+          <dl class="specs">
+            <div><dt>Processeur</dt><dd>À renseigner</dd></div>
+            <div><dt>Carte graphique</dt><dd>À renseigner</dd></div>
+            <div><dt>Mémoire (RAM)</dt><dd>À renseigner</dd></div>
+            <div><dt>Stockage</dt><dd>À renseigner</dd></div>
+            <div><dt>Carte mère</dt><dd>À renseigner</dd></div>
+            <div><dt>Alimentation</dt><dd>À renseigner</dd></div>
+            <div><dt>Boîtier</dt><dd>À renseigner</dd></div>
+            <div><dt>Refroidissement</dt><dd>À renseigner</dd></div>
+            <div><dt>Système</dt><dd>À renseigner</dd></div>
+          </dl>
+        </article>
+
+        <!-- Pour ajouter un 2e PC fixe, copie le bloc ci-dessus. -->
+
+        <!-- ========== FICHE PC PORTABLE (une par machine) ========== -->
+        <article class="rig reveal">
+          <span class="tape"></span>
+          <header class="rig-head">
+            <span class="tool-ico rig-ico"><svg class="ico"><use href="#i-laptop"/></svg></span>
+            <div>
+              <h3>Portable n°1</h3>
+              <p class="rig-sub">À renseigner (marque et modèle)</p>
+            </div>
+          </header>
+          <dl class="specs">
+            <div><dt>Processeur</dt><dd>À renseigner</dd></div>
+            <div><dt>Carte graphique</dt><dd>À renseigner</dd></div>
+            <div><dt>Mémoire (RAM)</dt><dd>À renseigner</dd></div>
+            <div><dt>Stockage</dt><dd>À renseigner</dd></div>
+            <div><dt>Écran</dt><dd>À renseigner</dd></div>
+            <div><dt>Usage</dt><dd>À renseigner</dd></div>
+          </dl>
+        </article>
+
+        <article class="rig reveal">
+          <span class="tape"></span>
+          <header class="rig-head">
+            <span class="tool-ico rig-ico"><svg class="ico"><use href="#i-laptop"/></svg></span>
+            <div>
+              <h3>Portable n°2</h3>
+              <p class="rig-sub">À renseigner (marque et modèle)</p>
+            </div>
+          </header>
+          <dl class="specs">
+            <div><dt>Processeur</dt><dd>À renseigner</dd></div>
+            <div><dt>Carte graphique</dt><dd>À renseigner</dd></div>
+            <div><dt>Mémoire (RAM)</dt><dd>À renseigner</dd></div>
+            <div><dt>Stockage</dt><dd>À renseigner</dd></div>
+            <div><dt>Écran</dt><dd>À renseigner</dd></div>
+            <div><dt>Usage</dt><dd>À renseigner</dd></div>
+          </dl>
+        </article>
+
+        <!-- Un seul portable ? Supprime le bloc « Portable n°2 » en entier.
+             Un de plus ? Copie un bloc « Portable » complet et colle-le ici. -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACCESSOIRES & PÉRIPHÉRIQUES ============ -->
+  <section id="peripheriques" class="section band">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="hand kicker">ce que je touche tous les jours</p>
+        <h2>Accessoires &amp; périphériques</h2>
+        <p class="section-sub">Écran, clavier, souris, casque, micro : tout ce qui entoure les machines.</p>
+      </header>
+
+      <div class="bench gear">
+
+        <!-- ========== TIROIR = un <article class="drawer reveal"> ==========
+             Titre du tiroir dans <h3 class="label">.
+             Chaque accessoire = un <li> : icône · nom (<b>) · détail (<small>). -->
+        <article class="drawer reveal">
+          <h3 class="label">Affichage &amp; image</h3>
+          <ul class="tools">
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-monitor"/></svg></span><span><b>Écran</b><small>À renseigner (modèle, taille, résolution, Hz)</small></span></li>
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-webcam"/></svg></span><span><b>Webcam</b><small>À renseigner</small></span></li>
+          </ul>
+        </article>
+
+        <article class="drawer reveal">
+          <h3 class="label">Saisie</h3>
+          <ul class="tools">
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-keyboard"/></svg></span><span><b>Clavier</b><small>À renseigner (modèle, switches)</small></span></li>
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-mouse"/></svg></span><span><b>Souris</b><small>À renseigner</small></span></li>
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-pad"/></svg></span><span><b>Tapis de souris</b><small>À renseigner</small></span></li>
+          </ul>
+        </article>
+
+        <article class="drawer reveal">
+          <h3 class="label">Audio</h3>
+          <ul class="tools">
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-headset"/></svg></span><span><b>Casque</b><small>À renseigner</small></span></li>
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-mic"/></svg></span><span><b>Micro</b><small>À renseigner</small></span></li>
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-speaker"/></svg></span><span><b>Enceintes</b><small>À renseigner</small></span></li>
+          </ul>
+        </article>
+
+        <!-- Modèle d'un nouveau tiroir (décommente et complète) :
+        <article class="drawer reveal">
+          <h3 class="label">Nom du tiroir</h3>
+          <ul class="tools">
+            <li><span class="tool-ico"><svg class="ico"><use href="#i-gamepad"/></svg></span><span><b>Manette</b><small>Modèle</small></span></li>
+          </ul>
+        </article>
+        -->
+
+      </div>
+
+      <p class="hand" style="margin-top:3rem">
+        <a href="index.html" class="link">← retour à l'accueil</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="f-brand">
+      <a class="brand brand-sm" href="index.html" aria-label="Martin92yt — accueil">
+        <span class="brand-avatar">
+          <img src="images/avatar.jpg" alt="" width="38" height="38" loading="lazy" decoding="async">
+        </span>
+        <span class="brand-name">Martin92yt</span>
+      </a>
+      <p><svg class="flag flag-inline" role="img" aria-label="Drapeau français"><use href="#flag-fr"/></svg>Développeur français, TypeScript avant tout. Site conçu et codé à la main en HTML5 et CSS3, sans framework.</p>
+    </div>
+
+    <nav class="f-col" aria-label="Plan du site">
+      <h4>Naviguer</h4>
+      <a href="index.html#a-propos">À propos</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="index.html#outils">Outils</a>
+      <a href="index.html#projets">Projets</a>
+      <a href="index.html#passions">Passions</a>
+      <a href="index.html#reseaux">Réseaux</a>
+      <a href="index.html#discord">Contact</a>
+      <a href="setup.html" aria-current="page">Setup (matériel)</a>
+    </nav>
+
+    <nav class="f-col" aria-label="Informations légales">
+      <h4>Informations</h4>
+      <a href="index.html#mentions-legales">Mentions légales</a>
+      <a href="index.html#confidentialite">Politique de confidentialité</a>
+      <a href="https://www.npmjs.com/package/dragons-of-legends.js" target="_blank" rel="noopener">NPM</a>
+    </nav>
+  </div>
+
+  <div class="wrap f-bottom">
+    <p>© 2026 Martin92yt — Tous droits réservés.</p>
+    <p class="hand">Fait avec ♥, du café et zéro framework.</p>
+    <p class="credits">Polices : Fraunces, Caveat, Space Mono (licence OFL) · Avatar : objet de la boutique Steam (Valve), acquis légalement · Hébergé sur Vercel.</p>
+  </div>
+</footer>
+
+<!-- Filet de sécurité facultatif (apparition au défilement sur les vieux navigateurs) -->
+<script>
+(function () {
+  if (window.CSS && CSS.supports && CSS.supports('animation-timeline: view()')) return;
+  if (!('IntersectionObserver' in window)) return;
+  var items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+  document.documentElement.classList.add('io');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  items.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>

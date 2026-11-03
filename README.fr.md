@@ -2,7 +2,7 @@
 
 🇬🇧 [English version](README.en.md)
 
-Mon portfolio personnel, écrit **à la main** en HTML5 et CSS3 pur : pas de framework, pas de bibliothèque, presque pas de JavaScript.
+Mon portfolio personnel, écrit **à la main** en HTML5 et CSS3 pur : pas de framework, pas de bibliothèque, presque pas de JavaScript. Le site compte deux pages : le portfolio (`index.html`) et ma page matériel (`setup.html`).
 
 Direction artistique « artisan-coder » : fond sombre, accent orange, icônes SVG dessinées à la main, petites animations CSS discrètes.
 
@@ -11,10 +11,18 @@ Direction artistique « artisan-coder » : fond sombre, accent orange, icônes S
 - **À propos** : présentation et ce que je construis
 - **Compétences** : TypeScript (langage principal), HTML5, CSS3, JavaScript, Java, Python, Express.js, EJS, SQLite, JSON
 - **Outils** : VS Code, IntelliJ IDEA, Sublime Text, Git & GitHub, HeidSQL, XAMPP, Figma, Trello, Vercel, NPM
-- **Projets** : [dragons-of-legends.js](https://www.npmjs.com/package/dragons-of-legends.js) et ce portfolio
+- **Projets** : Gifuto, ce portfolio et dragons-of-legends.js
+- **Setup** (`setup.html`) : PC fixe, portables, écran, clavier, souris, casque, micro
 - **Passions** : jeux vidéo et animes
 - **Réseaux** : Discord, GitHub, YouTube, NPM
 - **Contact** : uniquement via Discord
+
+## Projet à la une : Gifuto
+
+**Gifuto** est une API REST et un indexeur communautaire de GIFs d'anime, pensé pour les bots Discord et les projets web. On peut y soumettre, indexer et catégoriser des GIFs, utilisables dans des commandes comme `/hug`, `/kiss` ou `/pat`.
+
+- **Stack** : Express.js, TypeScript, Prisma, EJS, Neon PostgreSQL
+- **Site** : https://gifuto.vercel.app
 
 ## Particularités techniques
 
@@ -30,8 +38,9 @@ Direction artistique « artisan-coder » : fond sombre, accent orange, icônes S
 
 ```
 .
-├── index.html
-├── style.css
+├── index.html        # portfolio
+├── setup.html        # page matériel
+├── style.css         # commun aux deux pages
 ├── LICENSE
 ├── README.md
 ├── fonts/
@@ -46,6 +55,10 @@ Direction artistique « artisan-coder » : fond sombre, accent orange, icônes S
     ├── subnautica.jpg
     └── genshin-impact.jpg
 ```
+
+## Modifier la page Setup
+
+`setup.html` est du HTML simple : un bloc de commentaires en haut du fichier explique tout. Une ligne de caractéristiques = un `<div><dt>…</dt><dd>…</dd></div>`, une machine = un `<article class="rig">`, un accessoire = un `<li>`. On copie, modifie ou supprime sans toucher au design. Avant de publier, chercher « À renseigner » dans le fichier : il ne doit plus en rester.
 
 ## Lancer en local
 

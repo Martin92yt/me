@@ -2,19 +2,36 @@
 
 🇫🇷 [Version française](README.md)
 
-My personal portfolio, written **by hand** in pure HTML5 and CSS3: no framework, no library, almost no JavaScript.
+My personal portfolio, written **by hand** in pure HTML5 and CSS3: no framework, no library, almost no JavaScript. The site has two pages: the portfolio (`index.html`) and my hardware page (`setup.html`).
 
 Art direction: "artisan-coder". Dark background, orange accent, hand-drawn SVG icons, subtle CSS micro-animations.
+
+## Pages
+
+| Page | File | Content |
+|---|---|---|
+| Home | `index.html` | About, skills, tools, projects, interests, links, contact |
+| Setup | `setup.html` | Desktop PC, laptops, accessories and peripherals |
 
 ## Overview
 
 - **About**: introduction and what I build
 - **Skills**: TypeScript (main language), HTML5, CSS3, JavaScript, Java, Python, Express.js, EJS, SQLite, JSON
 - **Tools**: VS Code, IntelliJ IDEA, Sublime Text, Git & GitHub, HeidSQL, XAMPP, Figma, Trello, Vercel, NPM
-- **Projects**: [dragons-of-legends.js](https://www.npmjs.com/package/dragons-of-legends.js) and this portfolio
+- **Projects**: Gifuto, this portfolio and dragons-of-legends.js (see below)
+- **Setup**: PC specs (CPU, GPU, RAM, storage…), laptops, monitor, keyboard, mouse, headset, microphone
 - **Interests**: video games and anime
 - **Links**: Discord, GitHub, YouTube, NPM
 - **Contact**: through Discord only
+
+## Featured project: Gifuto
+
+**Gifuto** is a REST API and a community-driven index of anime GIFs, built for Discord bots and web projects. Members can submit, index and categorize GIFs, which can then be used in interaction commands such as `/hug`, `/kiss` or `/pat`.
+
+- **Stack**: Express.js, TypeScript, Prisma, EJS, Neon PostgreSQL
+- **Website**: https://gifuto.vercel.app
+
+The portfolio also lists [dragons-of-legends.js](https://www.npmjs.com/package/dragons-of-legends.js), an open source NPM library that simplifies building APIs for MMORPG servers (currently paused).
 
 ## Technical highlights
 
@@ -24,14 +41,16 @@ Art direction: "artisan-coder". Dark background, orange accent, hand-drawn SVG i
 - Inline SVG sprite (`<symbol>` + `<use>`) and a "pencil stroke" filter (`feTurbulence` + `feDisplacementMap`)
 - Honors `prefers-reduced-motion`
 - Responsive from 320 px to 1440 px
+- Both pages share the same stylesheet, fonts and hand-drawn icon style
 - Fonts and images are served with the site: no third-party service is called when the page loads
 
 ## Project structure
 
 ```
 .
-├── index.html
-├── style.css
+├── index.html        # portfolio
+├── setup.html        # hardware / setup page
+├── style.css         # shared by both pages
 ├── LICENSE
 ├── README.md
 ├── README.en.md
@@ -47,6 +66,16 @@ Art direction: "artisan-coder". Dark background, orange accent, hand-drawn SVG i
     ├── subnautica.jpg
     └── genshin-impact.jpg
 ```
+
+## Editing the Setup page
+
+`setup.html` is plain HTML, designed to be edited without breaking the layout. A comment block at the top of the file explains everything. In short:
+
+- **A spec line**: `<div><dt>Processor</dt><dd>My CPU</dd></div>`. Edit, copy or delete it.
+- **A PC card**: one `<article class="rig">…</article>` per machine. Copy a whole block to add a machine, delete it to remove one.
+- **An accessory**: one `<li>` inside a drawer (`<article class="drawer">`). Copy or delete it.
+
+Rotations, spacing and scroll animations adapt automatically. Before publishing, search the file for the placeholder text `À renseigner` (French for "to be filled in"): none should remain.
 
 ## Run locally
 
