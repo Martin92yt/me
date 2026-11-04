@@ -36,7 +36,7 @@ The portfolio also lists [dragons-of-legends.js](https://www.npmjs.com/package/d
 ## Technical highlights
 
 - 100% HTML/CSS: the mobile menu and the modals (legal notice, privacy policy) are driven by `:target`
-- Scroll-reveal animations using `animation-timeline: view()`, with a tiny `IntersectionObserver` fallback for browsers that don't support it
+- Scroll-reveal animations triggered by a tiny `IntersectionObserver` script, identical in every browser (without JavaScript, everything simply stays visible)
 - Reading progress bar in pure CSS (`animation-timeline: scroll()`)
 - Inline SVG sprite (`<symbol>` + `<use>`) and a "pencil stroke" filter (`feTurbulence` + `feDisplacementMap`)
 - Honors `prefers-reduced-motion`
@@ -60,7 +60,7 @@ The portfolio also lists [dragons-of-legends.js](https://www.npmjs.com/package/d
 │   ├── SpaceMono-Regular.ttf
 │   └── SpaceMono-Bold.ttf
 └── images/
-    ├── avatar.gif
+    ├── avatar.jpg
     ├── minecraft.jpg
     ├── satisfactory.jpg
     ├── subnautica.jpg
@@ -71,11 +71,13 @@ The portfolio also lists [dragons-of-legends.js](https://www.npmjs.com/package/d
 
 `setup.html` is plain HTML, designed to be edited without breaking the layout. A comment block at the top of the file explains everything. In short:
 
-- **A spec line**: `<div><dt>Processor</dt><dd>My CPU</dd></div>`. Edit, copy or delete it.
-- **A PC card**: one `<article class="rig">…</article>` per machine. Copy a whole block to add a machine, delete it to remove one.
-- **An accessory**: one `<li>` inside a drawer (`<article class="drawer">`). Copy or delete it.
+- **A PC component**: one `<article class="part">` tile (title, main value, optional detail).
+- **A monitor**: one `<article class="monitor">` (refresh rate, model, resolution).
+- **A peripheral**: one `<article class="gadget">` label (keyboard, mouse, headset, mic, Stream Deck, controller, racing wheel…).
 
-Rotations, spacing and scroll animations adapt automatically. Before publishing, search the file for the placeholder text `À renseigner` (French for "to be filled in"): none should remain.
+Copy a block to add an item, delete it to remove one.
+
+Rotations, spacing and scroll animations adapt automatically. Components whose model is unknown (case, motherboard, power supply) are simply left out; a commented-out template is ready in the PC section.
 
 ## Run locally
 

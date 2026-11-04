@@ -27,7 +27,7 @@ Direction artistique « artisan-coder » : fond sombre, accent orange, icônes S
 ## Particularités techniques
 
 - 100 % HTML/CSS : menu mobile et fenêtres modales (mentions légales, confidentialité) gérés avec `:target`
-- Animations à l'apparition via `animation-timeline: view()`, avec un petit script de secours (`IntersectionObserver`) pour les navigateurs qui ne le gèrent pas
+- Animations à l'apparition déclenchées par un petit script `IntersectionObserver`, identique sur tous les navigateurs (sans JavaScript, tout reste simplement visible)
 - Barre de progression de lecture en CSS (`animation-timeline: scroll()`)
 - Sprite SVG inline (`<symbol>` + `<use>`) et filtre « trait de crayon » (`feTurbulence` + `feDisplacementMap`)
 - Respect de `prefers-reduced-motion`
@@ -49,7 +49,7 @@ Direction artistique « artisan-coder » : fond sombre, accent orange, icônes S
 │   ├── SpaceMono-Regular.ttf
 │   └── SpaceMono-Bold.ttf
 └── images/
-    ├── avatar.gif
+    ├── avatar.jpg
     ├── minecraft.jpg
     ├── satisfactory.jpg
     ├── subnautica.jpg
@@ -58,7 +58,7 @@ Direction artistique « artisan-coder » : fond sombre, accent orange, icônes S
 
 ## Modifier la page Setup
 
-`setup.html` est du HTML simple : un bloc de commentaires en haut du fichier explique tout. Une ligne de caractéristiques = un `<div><dt>…</dt><dd>…</dd></div>`, une machine = un `<article class="rig">`, un accessoire = un `<li>`. On copie, modifie ou supprime sans toucher au design. Avant de publier, chercher « À renseigner » dans le fichier : il ne doit plus en rester.
+`setup.html` est du HTML simple : un bloc de commentaires en haut du fichier explique tout. Un composant du PC = une tuile `<article class="part">`, un écran = un `<article class="monitor">`, un périphérique = une étiquette `<article class="gadget">`. On copie, modifie ou supprime sans toucher au design. Les composants dont le modèle est inconnu (boîtier, carte mère, alimentation) ne sont pas affichés ; un modèle de tuile est prêt en commentaire.
 
 ## Lancer en local
 

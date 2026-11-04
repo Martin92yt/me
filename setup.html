@@ -39,12 +39,12 @@
   ║  (boîtier, carte mère, alimentation) ne sont pas affichés :      ║
   ║  un modèle de tuile à décommenter t'attend dans la section PC.   ║
   ║                                                                  ║
-  ║  AVANT DE PUBLIER : chercher (Ctrl+F) « À renseigner » dans ce   ║
-  ║  fichier. Il ne doit plus rester aucun résultat.                 ║
+  ║  Modèle inconnu ? Écris un texte provisoire, mais vérifie       ║
+  ║  tout avant de publier.                                          ║
   ║                                                                  ║
   ║  Icônes disponibles (#nom) : i-tower i-chip i-gpu i-ram i-disk   ║
   ║  i-window i-monitor i-keyboard i-mouse i-pad i-headset i-mic     ║
-  ║  i-speaker i-webcam i-gamepad i-deck                             ║
+  ║  i-speaker i-webcam i-gamepad i-deck i-wheel                   ║
   ╚══════════════════════════════════════════════════════════════════╝
 -->
 
@@ -76,7 +76,8 @@
     <symbol id="i-speaker" viewBox="0 0 48 48"><rect x="11" y="5" width="26" height="38" rx="4"/><circle cx="24" cy="16" r="3.5"/><circle cx="24" cy="31" r="7"/></symbol>
     <symbol id="i-webcam" viewBox="0 0 48 48"><circle cx="24" cy="19" r="12"/><circle cx="24" cy="19" r="4.5"/><path d="M14 44h20M24 31v13"/></symbol>
     <symbol id="i-gamepad" viewBox="0 0 48 48"><path d="M13 15h22a8 8 0 0 1 8 8l2 11a5 5 0 0 1-9 3l-4-6H16l-4 6a5 5 0 0 1-9-3l2-11a8 8 0 0 1 8-8z"/><path d="M15 22v6M12 25h6M32 22h.1M36 26h.1"/></symbol>
-    <symbol id="i-deck" viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="30" rx="4"/><rect x="11" y="15" width="8" height="8" rx="1.5"/><rect x="20" y="15" width="8" height="8" rx="1.5"/><rect x="29" y="15" width="8" height="8" rx="1.5"/><rect x="11" y="26" width="8" height="8" rx="1.5"/><rect x="20" y="26" width="8" height="8" rx="1.5"/><rect x="29" y="26" width="8" height="8" rx="1.5"/></symbol>
+    <symbol id="i-deck" viewBox="0 0 48 48"><rect x="3" y="9" width="42" height="30" rx="4"/><path d="M8 15h3M15 15h3M22 15h3M29 15h3M36 15h3M8 22h3M15 22h3M22 22h3M29 22h3M36 22h3M8 29h3M15 29h3M22 29h3M29 29h3M36 29h3" stroke-width="4"/></symbol>
+    <symbol id="i-wheel" viewBox="0 0 48 48"><circle cx="24" cy="22" r="17"/><circle cx="24" cy="22" r="4"/><path d="M8 20l12 2M40 20l-12 2M24 26v14M16 44h16"/></symbol>
   </defs>
 </svg>
 
@@ -153,7 +154,7 @@
         <rect class="fl" x="256" y="216" width="16" height="16" rx="8"/>
         <path d="M264 216v6"/>
         <rect class="fl" x="354" y="212" width="40" height="20" rx="3"/>
-        <path d="M362 219h.1M370 219h.1M378 219h.1M386 219h.1M362 226h.1M370 226h.1M378 226h.1M386 226h.1"/>
+        <path d="M360 217h.1M367 217h.1M374 217h.1M381 217h.1M388 217h.1M360 222h.1M367 222h.1M374 222h.1M381 222h.1M388 222h.1M360 227h.1M367 227h.1M374 227h.1M381 227h.1M388 227h.1"/>
         <!-- petits détails -->
         <path class="acc" d="M255 24c1 8 5 12 13 13-8 1-12 5-13 13-1-8-5-12-13-13 8-1 12-5 13-13z"/>
         <text x="288" y="46" transform="rotate(-4 288 46)">mon coin de code</text>
@@ -272,7 +273,7 @@
       <header class="section-head reveal">
         <p class="hand kicker">ce que je touche tous les jours</p>
         <h2>Périphériques</h2>
-        <p class="section-sub">Clavier, souris, casque, micro et le reste du bureau.</p>
+        <p class="section-sub">Clavier, souris, casque, micro, manette et même un volant.</p>
       </header>
 
       <div class="gadgets">
@@ -282,17 +283,17 @@
              et supprime la ligne <small> si tu n'en as plus besoin. -->
         <article class="gadget reveal">
           <span class="tool-ico"><svg class="ico"><use href="#i-keyboard"/></svg></span>
-          <div><span class="hand k">clavier</span><b>Razer</b><small>À renseigner (modèle)</small></div>
+          <div><span class="hand k">clavier</span><b>Razer BlackWidow V4 X</b></div>
         </article>
 
         <article class="gadget reveal">
           <span class="tool-ico"><svg class="ico"><use href="#i-mouse"/></svg></span>
-          <div><span class="hand k">souris</span><b>Razer</b><small>À renseigner (modèle)</small></div>
+          <div><span class="hand k">souris</span><b>Razer Basilisk V3</b></div>
         </article>
 
         <article class="gadget reveal">
           <span class="tool-ico"><svg class="ico"><use href="#i-headset"/></svg></span>
-          <div><span class="hand k">casque</span><b>Razer</b><small>À renseigner (modèle)</small></div>
+          <div><span class="hand k">casque</span><b>Razer Barracuda V2 Pro</b></div>
         </article>
 
         <article class="gadget reveal">
@@ -302,12 +303,17 @@
 
         <article class="gadget reveal">
           <span class="tool-ico"><svg class="ico"><use href="#i-deck"/></svg></span>
-          <div><span class="hand k">contrôle</span><b>Elgato Stream Deck</b><small>À renseigner (modèle)</small></div>
+          <div><span class="hand k">contrôle</span><b>Elgato Stream Deck</b><small>15 touches (3 × 5)</small></div>
         </article>
 
         <article class="gadget reveal">
           <span class="tool-ico"><svg class="ico"><use href="#i-gamepad"/></svg></span>
-          <div><span class="hand k">manette</span><b>Razer</b><small>À renseigner (modèle)</small></div>
+          <div><span class="hand k">manette</span><b>Razer Raiju V3 Pro</b></div>
+        </article>
+
+        <article class="gadget gadget-wide reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-wheel"/></svg></span>
+          <div><span class="hand k">simulation</span><b>Logitech G29</b><small>volant et pédalier · sans levier de vitesse</small></div>
         </article>
 
       </div>
@@ -360,20 +366,23 @@
   </div>
 </footer>
 
-<!-- Filet de sécurité facultatif (apparition au défilement sur les vieux navigateurs) -->
+<!-- Apparition au défilement (facultatif : sans ce script, tout reste visible) -->
 <script>
 (function () {
-  if (window.CSS && CSS.supports && CSS.supports('animation-timeline: view()')) return;
   if (!('IntersectionObserver' in window)) return;
   var items = document.querySelectorAll('.reveal');
   if (!items.length) return;
-  document.documentElement.classList.add('io');
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-  items.forEach(function (el) { io.observe(el); });
+  try {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    document.documentElement.classList.add('io');
+    items.forEach(function (el) { io.observe(el); });
+  } catch (err) {
+    document.documentElement.classList.remove('io');
+  }
 })();
 </script>
 
