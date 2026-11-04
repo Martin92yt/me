@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Setup — Martin92yt</title>
-  <meta name="description" content="Le matériel de Martin92yt : PC fixe, PC portables, écran, clavier, souris, casque et micro.">
+  <meta name="description" content="Le matériel de Martin92yt : PC principal, écrans, clavier, souris, casque, micro, Stream Deck et manette.">
   <meta name="theme-color" content="#18181B">
   <meta name="author" content="Martin92yt">
   <meta name="robots" content="index, follow">
@@ -13,11 +13,11 @@
   <meta property="og:site_name" content="Martin92yt">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Setup — Martin92yt">
-  <meta property="og:description" content="Le matériel de Martin92yt : PC fixe, PC portables et périphériques.">
+  <meta property="og:description" content="Le matériel de Martin92yt : PC, écrans et périphériques.">
   <meta property="og:image" content="images/avatar.gif">
   <meta name="twitter:card" content="summary">
 
-  <link rel="icon" type="image/jpeg" href="images/avatar.gif">
+  <link rel="icon" type="image/gif" href="images/avatar.gif">
   <link rel="apple-touch-icon" href="images/avatar.gif">
 
   <link rel="stylesheet" href="style.css">
@@ -28,32 +28,23 @@
   ╔══════════════════════════════════════════════════════════════════╗
   ║  MODE D'EMPLOI : MODIFIER LE MATÉRIEL SANS RIEN CASSER           ║
   ╠══════════════════════════════════════════════════════════════════╣
-  ║  Tout se passe dans <main>, à 3 endroits seulement :             ║
+  ║  La page a 3 sections. Chaque élément est un bloc à copier,      ║
+  ║  modifier ou supprimer (rotations et animations automatiques) :  ║
   ║                                                                  ║
-  ║  1) UNE LIGNE de caractéristiques (dans une fiche PC) :          ║
-  ║       <div><dt>Processeur</dt><dd>Mon CPU</dd></div>             ║
-  ║     → modifier le texte, ou supprimer / copier la ligne.         ║
-  ║     Pour un détail en petit sous la valeur :                     ║
-  ║       <dd>Mon CPU <small>détail</small></dd>                     ║
+  ║  1) LE PC        → une tuile  <article class="part">             ║
+  ║  2) LES ÉCRANS   → un écran   <article class="monitor">          ║
+  ║  3) PÉRIPHÉRIQUES→ une étiquette <article class="gadget">        ║
   ║                                                                  ║
-  ║  2) UNE FICHE PC (<article class="rig">…</article>) :            ║
-  ║     → copier un bloc complet pour ajouter une machine,           ║
-  ║       le supprimer en entier pour l'enlever.                     ║
-  ║     Un modèle prêt à copier est en commentaire sous chaque       ║
-  ║     section.                                                     ║
-  ║                                                                  ║
-  ║  3) UNE LIGNE d'accessoire (<li>…</li> dans un tiroir) :         ║
-  ║     → copier / supprimer le <li>. Un tiroir = un <article>.      ║
-  ║                                                                  ║
-  ║  Les décalages, rotations et animations s'ajustent seuls :       ║
-  ║  on peut ajouter ou retirer autant d'éléments qu'on veut.        ║
+  ║  Les composants dont tu ne connais pas encore le modèle          ║
+  ║  (boîtier, carte mère, alimentation) ne sont pas affichés :      ║
+  ║  un modèle de tuile à décommenter t'attend dans la section PC.   ║
   ║                                                                  ║
   ║  AVANT DE PUBLIER : chercher (Ctrl+F) « À renseigner » dans ce   ║
   ║  fichier. Il ne doit plus rester aucun résultat.                 ║
   ║                                                                  ║
-  ║  Icônes disponibles pour les accessoires (#nom) :                ║
-  ║  i-monitor i-keyboard i-mouse i-pad i-headset i-mic i-speaker    ║
-  ║  i-webcam i-gamepad i-laptop i-tower i-chip i-gpu i-ram i-disk   ║
+  ║  Icônes disponibles (#nom) : i-tower i-chip i-gpu i-ram i-disk   ║
+  ║  i-window i-monitor i-keyboard i-mouse i-pad i-headset i-mic     ║
+  ║  i-speaker i-webcam i-gamepad i-deck                             ║
   ╚══════════════════════════════════════════════════════════════════╝
 -->
 
@@ -67,17 +58,15 @@
 
     <symbol id="flag-fr" viewBox="0 0 30 20"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#EF4135"/></symbol>
 
-    <!-- Machines -->
+    <!-- Le PC -->
     <symbol id="i-tower" viewBox="0 0 48 48"><rect x="13" y="5" width="22" height="38" rx="3"/><path d="M19 12h10M19 17h10"/><circle cx="24" cy="32" r="5"/><path d="M24 29.5v3"/></symbol>
-    <symbol id="i-laptop" viewBox="0 0 48 48"><path d="M9 31V12a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2v19"/><path d="M9 31h30M4 37h40l-2.5 3h-35z"/></symbol>
-
-    <!-- Composants -->
     <symbol id="i-chip" viewBox="0 0 48 48"><rect x="12" y="12" width="24" height="24" rx="3"/><rect x="19" y="19" width="10" height="10" rx="1.5"/><path d="M18 6v6M24 6v6M30 6v6M18 36v6M24 36v6M30 36v6M6 18h6M6 24h6M6 30h6M36 18h6M36 24h6M36 30h6"/></symbol>
     <symbol id="i-gpu" viewBox="0 0 48 48"><rect x="4" y="12" width="40" height="22" rx="3"/><circle cx="17" cy="23" r="6"/><circle cx="33" cy="23" r="6"/><path d="M9 34v5M17 34v5"/></symbol>
     <symbol id="i-ram" viewBox="0 0 48 48"><rect x="4" y="13" width="40" height="17" rx="2"/><path d="M10 20h5M21 20h5M32 20h5M9 30v6M16 30v6M23 30v6M30 30v6M37 30v6"/></symbol>
     <symbol id="i-disk" viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="22" rx="3"/><path d="M12 29h12M34 29h.1M34 22h.1"/></symbol>
+    <symbol id="i-window" viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="4"/><path d="M6 17h36M12 12.5h.1M17 12.5h.1"/></symbol>
 
-    <!-- Périphériques -->
+    <!-- Écrans & périphériques -->
     <symbol id="i-monitor" viewBox="0 0 48 48"><rect x="5" y="8" width="38" height="25" rx="3"/><path d="M18 42h12M24 33v9"/></symbol>
     <symbol id="i-keyboard" viewBox="0 0 48 48"><rect x="4" y="13" width="40" height="22" rx="4"/><path d="M10 20h.1M16 20h.1M22 20h.1M28 20h.1M34 20h.1M38 20h.1M10 27h.1M38 27h.1M16 28h16"/></symbol>
     <symbol id="i-mouse" viewBox="0 0 48 48"><rect x="14" y="6" width="20" height="36" rx="10"/><path d="M24 6v13M14 19h20"/></symbol>
@@ -87,6 +76,7 @@
     <symbol id="i-speaker" viewBox="0 0 48 48"><rect x="11" y="5" width="26" height="38" rx="4"/><circle cx="24" cy="16" r="3.5"/><circle cx="24" cy="31" r="7"/></symbol>
     <symbol id="i-webcam" viewBox="0 0 48 48"><circle cx="24" cy="19" r="12"/><circle cx="24" cy="19" r="4.5"/><path d="M14 44h20M24 31v13"/></symbol>
     <symbol id="i-gamepad" viewBox="0 0 48 48"><path d="M13 15h22a8 8 0 0 1 8 8l2 11a5 5 0 0 1-9 3l-4-6H16l-4 6a5 5 0 0 1-9-3l2-11a8 8 0 0 1 8-8z"/><path d="M15 22v6M12 25h6M32 22h.1M36 26h.1"/></symbol>
+    <symbol id="i-deck" viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="30" rx="4"/><rect x="11" y="15" width="8" height="8" rx="1.5"/><rect x="20" y="15" width="8" height="8" rx="1.5"/><rect x="29" y="15" width="8" height="8" rx="1.5"/><rect x="11" y="26" width="8" height="8" rx="1.5"/><rect x="20" y="26" width="8" height="8" rx="1.5"/><rect x="29" y="26" width="8" height="8" rx="1.5"/></symbol>
   </defs>
 </svg>
 
@@ -126,150 +116,203 @@
 
 <main id="top">
 
-  <!-- ============ INTRO ============ -->
+  <!-- ============ INTRO + DESSIN DU BUREAU ============ -->
   <section class="page-hero">
-    <div class="wrap">
-      <p class="hand kicker">mon matériel</p>
-      <h1>Mon <em>setup</em></h1>
-      <p class="lead">Les machines et le matériel que j'utilise au quotidien pour coder, jouer et explorer.</p>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="hand kicker">mon matériel</p>
+        <h1>Mon <em>setup</em></h1>
+        <p class="lead">Le PC, les écrans et les périphériques avec lesquels je code et je joue au quotidien.</p>
+        <!-- Résumé rapide : modifie ou supprime les <span> -->
+        <p class="tags glance"><span>Ryzen 5 PRO 3350GE</span><span>16 Go de RAM</span><span>2 écrans</span><span>Windows 11</span></p>
+      </div>
+
+      <!-- Dessin décoratif : deux écrans, une tour, un clavier, une souris, un Stream Deck, un casque -->
+      <svg class="scene" viewBox="0 0 480 290" role="img" aria-label="Dessin de mon bureau : deux écrans, une tour, un clavier, une souris, un Stream Deck et un casque.">
+        <path d="M10 236h460M34 236v48M446 236v48"/>
+        <!-- casque suspendu -->
+        <path d="M44 112V94"/>
+        <path d="M24 150v-18a20 20 0 0 1 40 0v18"/>
+        <rect x="17" y="148" width="14" height="28" rx="6"/>
+        <rect x="57" y="148" width="14" height="28" rx="6"/>
+        <!-- écran 1 -->
+        <rect x="86" y="62" width="150" height="100" rx="7"/>
+        <path d="M161 162v70M132 232h58"/>
+        <path class="acc" d="M102 82h56M102 98h88M102 114h40M102 130h70"/>
+        <!-- écran 2 -->
+        <rect x="256" y="82" width="130" height="80" rx="7"/>
+        <path d="M321 162v70M293 232h56"/>
+        <path class="acc" d="M272 102h46M272 118h78M272 134h34"/>
+        <!-- tour -->
+        <rect x="400" y="118" width="58" height="114" rx="6"/>
+        <path d="M412 136h34M412 146h34M429 196v8"/>
+        <circle cx="429" cy="200" r="8"/>
+        <!-- clavier, souris, Stream Deck -->
+        <rect class="fl" x="110" y="212" width="132" height="20" rx="5"/>
+        <path d="M122 219h.1M132 219h.1M142 219h.1M152 219h.1M162 219h.1M172 219h.1M182 219h.1M192 219h.1M202 219h.1M212 219h.1M222 219h.1M138 226h60"/>
+        <rect class="fl" x="256" y="216" width="16" height="16" rx="8"/>
+        <path d="M264 216v6"/>
+        <rect class="fl" x="354" y="212" width="40" height="20" rx="3"/>
+        <path d="M362 219h.1M370 219h.1M378 219h.1M386 219h.1M362 226h.1M370 226h.1M378 226h.1M386 226h.1"/>
+        <!-- petits détails -->
+        <path class="acc" d="M255 24c1 8 5 12 13 13-8 1-12 5-13 13-1-8-5-12-13-13 8-1 12-5 13-13z"/>
+        <text x="288" y="46" transform="rotate(-4 288 46)">mon coin de code</text>
+      </svg>
     </div>
   </section>
 
-  <!-- ============ PC FIXE & PORTABLES ============ -->
-  <section id="machines" class="section">
+  <!-- ============ LE PC ============ -->
+  <section id="pc" class="section">
     <div class="wrap">
       <header class="section-head reveal">
         <p class="hand kicker">sous le capot</p>
-        <h2>PC &amp; portables</h2>
-        <p class="section-sub">Les machines sur lesquelles je travaille, avec leurs composants.</p>
+        <h2>Mon PC principal</h2>
+        <p class="section-sub">La machine sur laquelle je développe et je joue.</p>
       </header>
 
-      <div class="rigs">
+      <div class="parts">
 
-        <!-- ========== FICHE PC FIXE ==========
-             class="rig rig-wide" = fiche sur toute la largeur (2 colonnes de caractéristiques).
-             Retire "rig-wide" pour une fiche normale, à côté d'une autre. -->
-        <article class="rig rig-wide reveal">
+        <!-- ========== TUILE = un <article class="part reveal"> ==========
+             <span class="hand k"> = petit titre · <b> = valeur principale · <small> = détail (facultatif).
+             class="part part-lead" = tuile double largeur. -->
+        <article class="part part-lead reveal">
           <span class="tape"></span>
-          <span class="stamp hand">PC principal</span>
-          <header class="rig-head">
-            <span class="tool-ico rig-ico"><svg class="ico"><use href="#i-tower"/></svg></span>
-            <div>
-              <h3>Mon PC fixe</h3>
-              <p class="rig-sub">Tour · À renseigner (usage, année…)</p>
-            </div>
-          </header>
-          <dl class="specs">
-            <div><dt>Processeur</dt><dd>AMD Ryzen 5 PRO 3350GE with Radeon Vega Graphic (3.30 GHz)</dd></div>
-            <div><dt>Carte graphique</dt><dd>AMD Radeon(TM) Vega 11 Graphics (2 GB)</dd></div>
-            <div><dt>Mémoire (RAM)</dt><dd>16,0 GB</dd></div>
-            <div><dt>Stockage</dt><dd>2,01 TB</dd></div>
-            <div><dt>Carte mère</dt><dd>À renseigner</dd></div>
-            <div><dt>Alimentation</dt><dd>À renseigner</dd></div>
-            <div><dt>Boîtier</dt><dd>À renseigner</dd></div>
-            <div><dt>Refroidissement</dt><dd>À renseigner</dd></div>
-            <div><dt>Système</dt><dd>Windows 11</dd></div>
-          </dl>
+          <span class="tool-ico"><svg class="ico"><use href="#i-chip"/></svg></span>
+          <span class="hand k">processeur</span>
+          <b>AMD Ryzen 5 PRO 3350GE</b>
+          <small>3,30 GHz</small>
         </article>
 
-        <!-- Pour ajouter un 2e PC fixe, copie le bloc ci-dessus. -->
-
-        <!-- ========== FICHE PC PORTABLE (une par machine) ========== -->
-        <article class="rig reveal">
-          <span class="tape"></span>
-          <header class="rig-head">
-            <span class="tool-ico rig-ico"><svg class="ico"><use href="#i-laptop"/></svg></span>
-            <div>
-              <h3>Portable n°1</h3>
-              <p class="rig-sub">À renseigner (marque et modèle)</p>
-            </div>
-          </header>
-          <dl class="specs">
-            <div><dt>Processeur</dt><dd>À renseigner</dd></div>
-            <div><dt>Carte graphique</dt><dd>À renseigner</dd></div>
-            <div><dt>Mémoire (RAM)</dt><dd>À renseigner</dd></div>
-            <div><dt>Stockage</dt><dd>À renseigner</dd></div>
-            <div><dt>Écran</dt><dd>À renseigner</dd></div>
-            <div><dt>Usage</dt><dd>À renseigner</dd></div>
-          </dl>
+        <article class="part reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-gpu"/></svg></span>
+          <span class="hand k">graphique</span>
+          <b>AMD Radeon Vega 11</b>
+          <small>intégré au processeur · 2 Go</small>
         </article>
 
-        <article class="rig reveal">
-          <span class="tape"></span>
-          <header class="rig-head">
-            <span class="tool-ico rig-ico"><svg class="ico"><use href="#i-laptop"/></svg></span>
-            <div>
-              <h3>Portable n°2</h3>
-              <p class="rig-sub">À renseigner (marque et modèle)</p>
-            </div>
-          </header>
-          <dl class="specs">
-            <div><dt>Processeur</dt><dd>À renseigner</dd></div>
-            <div><dt>Carte graphique</dt><dd>À renseigner</dd></div>
-            <div><dt>Mémoire (RAM)</dt><dd>À renseigner</dd></div>
-            <div><dt>Stockage</dt><dd>À renseigner</dd></div>
-            <div><dt>Écran</dt><dd>À renseigner</dd></div>
-            <div><dt>Usage</dt><dd>À renseigner</dd></div>
-          </dl>
+        <article class="part reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-ram"/></svg></span>
+          <span class="hand k">mémoire</span>
+          <b>16 Go</b>
+          <small>RAM</small>
         </article>
 
-        <!-- Un seul portable ? Supprime le bloc « Portable n°2 » en entier.
-             Un de plus ? Copie un bloc « Portable » complet et colle-le ici. -->
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ACCESSOIRES & PÉRIPHÉRIQUES ============ -->
-  <section id="peripheriques" class="section band">
-    <div class="wrap">
-      <header class="section-head reveal">
-        <p class="hand kicker">ce que je touche tous les jours</p>
-        <h2>Accessoires &amp; périphériques</h2>
-        <p class="section-sub">Écran, clavier, souris, casque, micro : tout ce qui entoure les machines.</p>
-      </header>
-
-      <div class="bench gear">
-
-        <!-- ========== TIROIR = un <article class="drawer reveal"> ==========
-             Titre du tiroir dans <h3 class="label">.
-             Chaque accessoire = un <li> : icône · nom (<b>) · détail (<small>). -->
-        <article class="drawer reveal">
-          <h3 class="label">Affichage &amp; image</h3>
-          <ul class="tools">
-            <li><span class="tool-ico"><svg class="ico"><use href="#i-monitor"/></svg></span><span><b>Écran 1</b><small>MSI G241, 1920x1080, 144 Hz</small></span></li>
-            <li><span class="tool-ico"><svg class="ico"><use href="#i-monitor"/></svg></span><span><b>Écran 2</b><small>TERRA 2447W, 1920x1080, 60 Hz</small></span></li>
-          </ul>
+        <article class="part reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-disk"/></svg></span>
+          <span class="hand k">stockage</span>
+          <b>2,01 To</b>
+          <small>capacité totale</small>
         </article>
 
-        <article class="drawer reveal">
-          <h3 class="label">Saisie</h3>
-          <ul class="tools">
-            <li><span class="tool-ico"><svg class="ico"><use href="#i-keyboard"/></svg></span><span><b>Clavier</b><small>Razer </small></span></li>
-            <li><span class="tool-ico"><svg class="ico"><use href="#i-mouse"/></svg></span><span><b>Souris</b><small>Razer </small></span></li>
-          </ul>
+        <article class="part reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-window"/></svg></span>
+          <span class="hand k">système</span>
+          <b>Windows 11</b>
         </article>
 
-        <article class="drawer reveal">
-          <h3 class="label">Audio</h3>
-          <ul class="tools">
-            <li><span class="tool-ico"><svg class="ico"><use href="#i-headset"/></svg></span><span><b>Casque</b><small>Razer</small></span></li>
-            <li><span class="tool-ico"><svg class="ico"><use href="#i-mic"/></svg></span><span><b>Micro</b><small>Tenor TC30</small></span></li>
-          </ul>
-        </article>
-
-        <!-- Modèle d'un nouveau tiroir (décommente et complète) :
-        <article class="drawer reveal">
-          <h3 class="label">Nom du tiroir</h3>
-          <ul class="tools">
-            <li><span class="tool-ico"><svg class="ico"><use href="#i-gamepad"/></svg></span><span><b>Manette</b><small>Modèle</small></span></li>
-          </ul>
+        <!-- À AJOUTER quand tu connais les modèles (décommente et complète) :
+             carte mère, alimentation, boîtier, refroidissement…
+        <article class="part reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-tower"/></svg></span>
+          <span class="hand k">boîtier</span>
+          <b>Modèle du boîtier</b>
         </article>
         -->
 
       </div>
+    </div>
+  </section>
 
-      <p class="hand" style="margin-top:3rem">
+  <!-- ============ LES ÉCRANS ============ -->
+  <section id="ecrans" class="section band">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="hand kicker">double vue</p>
+        <h2>Mes écrans</h2>
+        <p class="section-sub">Deux écrans pour garder le code d'un côté et le reste de l'autre.</p>
+      </header>
+
+      <div class="screens">
+
+        <!-- ========== ÉCRAN = un <article class="monitor reveal"> ==========
+             m-hz = fréquence · m-name = modèle · m-res = résolution -->
+        <article class="monitor reveal">
+          <div class="screen">
+            <div class="win"><i></i><i></i><i></i></div>
+            <div class="screen-body">
+              <span class="m-hz">144 Hz</span>
+              <span class="m-name">MSI G241</span>
+              <span class="m-res">1920 × 1080</span>
+            </div>
+          </div>
+          <span class="m-neck"></span><span class="m-foot"></span>
+          <p class="hand m-label">écran 1</p>
+        </article>
+
+        <article class="monitor reveal">
+          <div class="screen">
+            <div class="win"><i></i><i></i><i></i></div>
+            <div class="screen-body">
+              <span class="m-hz">60 Hz</span>
+              <span class="m-name">TERRA 2447W</span>
+              <span class="m-res">1920 × 1080</span>
+            </div>
+          </div>
+          <span class="m-neck"></span><span class="m-foot"></span>
+          <p class="hand m-label">écran 2</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PÉRIPHÉRIQUES ============ -->
+  <section id="peripheriques" class="section">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="hand kicker">ce que je touche tous les jours</p>
+        <h2>Périphériques</h2>
+        <p class="section-sub">Clavier, souris, casque, micro et le reste du bureau.</p>
+      </header>
+
+      <div class="gadgets">
+
+        <!-- ========== ÉTIQUETTE = un <article class="gadget reveal"> ==========
+             Mets le nom complet dans <b> (ex. : « Razer BlackWidow V4 »)
+             et supprime la ligne <small> si tu n'en as plus besoin. -->
+        <article class="gadget reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-keyboard"/></svg></span>
+          <div><span class="hand k">clavier</span><b>Razer</b><small>À renseigner (modèle)</small></div>
+        </article>
+
+        <article class="gadget reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-mouse"/></svg></span>
+          <div><span class="hand k">souris</span><b>Razer</b><small>À renseigner (modèle)</small></div>
+        </article>
+
+        <article class="gadget reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-headset"/></svg></span>
+          <div><span class="hand k">casque</span><b>Razer</b><small>À renseigner (modèle)</small></div>
+        </article>
+
+        <article class="gadget reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-mic"/></svg></span>
+          <div><span class="hand k">micro</span><b>Tonor TC30</b></div>
+        </article>
+
+        <article class="gadget reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-deck"/></svg></span>
+          <div><span class="hand k">contrôle</span><b>Elgato Stream Deck</b><small>À renseigner (modèle)</small></div>
+        </article>
+
+        <article class="gadget reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-gamepad"/></svg></span>
+          <div><span class="hand k">manette</span><b>Razer</b><small>À renseigner (modèle)</small></div>
+        </article>
+
+      </div>
+
+      <p class="hand" style="margin-top:3.5rem">
         <a href="index.html" class="link">← retour à l'accueil</a>
       </p>
     </div>
