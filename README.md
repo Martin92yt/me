@@ -60,7 +60,7 @@ The portfolio also lists [dragons-of-legends.js](https://www.npmjs.com/package/d
 │   ├── SpaceMono-Regular.ttf
 │   └── SpaceMono-Bold.ttf
 └── images/
-    ├── avatar.jpg
+    ├── avatar.gif
     ├── minecraft.jpg
     ├── satisfactory.jpg
     ├── subnautica.jpg

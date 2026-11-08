@@ -49,7 +49,7 @@ Direction artistique « artisan-coder » : fond sombre, accent orange, icônes S
 │   ├── SpaceMono-Regular.ttf
 │   └── SpaceMono-Bold.ttf
 └── images/
-    ├── avatar.jpg
+    ├── avatar.gif
     ├── minecraft.jpg
     ├── satisfactory.jpg
     ├── subnautica.jpg
