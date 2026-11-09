@@ -1,8 +1,8 @@
 # Martin92yt — Portfolio
 
-🇫🇷 [Version française](README.md)
+🇫🇷 [Version française](README.fr.md)
 
-My personal portfolio, written **by hand** in pure HTML5 and CSS3: no framework, no library, almost no JavaScript. The site has two pages: the portfolio (`index.html`) and my hardware page (`setup.html`).
+My personal portfolio, written **by hand** in pure HTML5 and CSS3: no framework, no library, almost no JavaScript.
 
 Art direction: "artisan-coder". Dark background, orange accent, hand-drawn SVG icons, subtle CSS micro-animations.
 
@@ -10,28 +10,30 @@ Art direction: "artisan-coder". Dark background, orange accent, hand-drawn SVG i
 
 | Page | File | Content |
 |---|---|---|
-| Home | `index.html` | About, skills, tools, projects, interests, links, contact |
-| Setup | `setup.html` | Desktop PC, laptops, accessories and peripherals |
+| Home | `index.html` | About, skills, tools, a preview of my projects, interests, links, contact |
+| Projects | `projets.html` | Detailed case studies: description, tech stack, screenshots and links (npm, GitHub, live site) |
+| Setup | `setup.html` | PC specs, monitors, peripherals, and my other machines |
 
-## Overview
+## Featured projects
 
-- **About**: introduction and what I build
-- **Skills**: TypeScript (main language), HTML5, CSS3, JavaScript, Java, Python, Express.js, EJS, SQLite, JSON
-- **Tools**: VS Code, IntelliJ IDEA, Sublime Text, Git & GitHub, HeidSQL, XAMPP, Figma, Trello, Vercel, NPM
-- **Projects**: Gifuto, this portfolio and dragons-of-legends.js (see below)
-- **Setup**: PC specs (CPU, GPU, RAM, storage…), laptops, monitor, keyboard, mouse, headset, microphone
-- **Interests**: video games and anime
-- **Links**: Discord, GitHub, YouTube, NPM
-- **Contact**: through Discord only
+### Gifuto
 
-## Featured project: Gifuto
+A REST API and a community-driven index of anime GIFs, built for Discord bots and web projects. Members submit GIFs, which are then indexed and categorized so they can be used in interaction commands such as `/hug`, `/kiss` or `/pat`.
 
-**Gifuto** is a REST API and a community-driven index of anime GIFs, built for Discord bots and web projects. Members can submit, index and categorize GIFs, which can then be used in interaction commands such as `/hug`, `/kiss` or `/pat`.
-
-- **Stack**: Express.js, TypeScript, Prisma, EJS, Neon PostgreSQL
+- **Stack**: TypeScript, Express.js, Prisma, EJS, Neon PostgreSQL
 - **Website**: https://gifuto.vercel.app
+- **npm package**: [`gifuto.js`](https://www.npmjs.com/package/gifuto.js), which reached 300 downloads in a single day
 
-The portfolio also lists [dragons-of-legends.js](https://www.npmjs.com/package/dragons-of-legends.js), an open source NPM library that simplifies building APIs for MMORPG servers (currently paused).
+### dragons-of-legends.js
+
+An open source NPM library that simplifies building APIs for MMORPG servers, written in TypeScript. It has more than 2,500 downloads.
+
+- **npm**: https://www.npmjs.com/package/dragons-of-legends.js
+- **Repository**: https://github.com/Martin92yt/DragonsOfLegends.js
+
+### This portfolio
+
+Hand-coded in HTML and CSS, focused on minimalism and performance. Source code: https://github.com/Martin92yt/me
 
 ## Technical highlights
 
@@ -41,19 +43,20 @@ The portfolio also lists [dragons-of-legends.js](https://www.npmjs.com/package/d
 - Inline SVG sprite (`<symbol>` + `<use>`) and a "pencil stroke" filter (`feTurbulence` + `feDisplacementMap`)
 - Honors `prefers-reduced-motion`
 - Responsive from 320 px to 1440 px
-- Both pages share the same stylesheet, fonts and hand-drawn icon style
-- Fonts and images are served with the site: no third-party service is called when the page loads
+- All pages share the same stylesheet, fonts and hand-drawn icon style
+- Fonts and images are served with the site: no third-party service is called when a page loads
 
 ## Project structure
 
 ```
 .
-├── index.html        # portfolio
-├── setup.html        # hardware / setup page
-├── style.css         # shared by both pages
+├── index.html          # home
+├── projets.html        # projects
+├── setup.html          # hardware / setup
+├── style.css           # shared by all pages
 ├── LICENSE
-├── README.md
-├── README.en.md
+├── README.md           # English (default)
+├── README.fr.md        # French
 ├── fonts/
 │   ├── Caveat.ttf
 │   ├── Fraunces.ttf
@@ -64,20 +67,19 @@ The portfolio also lists [dragons-of-legends.js](https://www.npmjs.com/package/d
     ├── minecraft.jpg
     ├── satisfactory.jpg
     ├── subnautica.jpg
-    └── genshin-impact.jpg
+    ├── genshin-impact.jpg
+    └── projects/
+        ├── gifuto.png
+        ├── dragons-of-legends.png
+        └── portfolio.png
 ```
 
-## Editing the Setup page
+## Editing the content
 
-`setup.html` is plain HTML, designed to be edited without breaking the layout. A comment block at the top of the file explains everything. In short:
+Both `projets.html` and `setup.html` are plain HTML designed to be edited without breaking the layout. A comment block at the top of each file explains how.
 
-- **A PC component**: one `<article class="part">` tile (title, main value, optional detail).
-- **A monitor**: one `<article class="monitor">` (refresh rate, model, resolution).
-- **A peripheral**: one `<article class="gadget">` label (keyboard, mouse, headset, mic, Stream Deck, controller, racing wheel…).
-
-Copy a block to add an item, delete it to remove one.
-
-Rotations, spacing and scroll animations adapt automatically. Components whose model is unknown (case, motherboard, power supply) are simply left out; a commented-out template is ready in the PC section.
+- **Projects page**: one `<article class="case">` per project. Copy a block to add a project, delete it to remove one. Each line of the "In short" and "Stack" lists is a `<li>` to copy, edit or delete. Drop the screenshots in `images/projects/` (16:10 ratio recommended); a drawn placeholder shows until the file exists.
+- **Setup page**: one `<article class="part">` per PC component, `monitor` per screen, `gadget` per peripheral and `device` per machine.
 
 ## Run locally
 

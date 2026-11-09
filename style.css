@@ -739,11 +739,11 @@ h1 em::after {
 @keyframes rise { from { opacity: 0; translate: 0 36px; } to { opacity: 1; translate: 0 0; } }
 
 /* Décalage de la cascade entre éléments voisins (délai de transition, en secondes). */
-:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget):nth-child(6n+2) { --dt: .07s; }
-:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget):nth-child(6n+3) { --dt: .14s; }
-:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget):nth-child(6n+4) { --dt: .21s; }
-:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget):nth-child(6n+5) { --dt: .28s; }
-:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget):nth-child(6n+6) { --dt: .35s; }
+:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget, .device):nth-child(6n+2) { --dt: .07s; }
+:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget, .device):nth-child(6n+3) { --dt: .14s; }
+:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget, .device):nth-child(6n+4) { --dt: .21s; }
+:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget, .device):nth-child(6n+5) { --dt: .28s; }
+:is(.chip, .drawer, .social, .card, .hobby, .part, .monitor, .gadget, .device):nth-child(6n+6) { --dt: .35s; }
 
 /* Apparition au défilement.
    Le petit script en bas de page ajoute la classe "io" sur <html>, puis la classe "in"
@@ -959,6 +959,104 @@ h1 em::after {
   .part-lead { grid-column: auto; }
   .part:nth-child(n), .gadget:nth-child(n), .monitor:nth-child(n) { transform: none; }
   .gadget { padding: 1.1rem; }
+}
+
+/* ---------- 18 ter. Page Projets, note Steam, machines secondaires ---------- */
+.section-cta { margin-top: 2.8rem; }
+.steam-note {
+  margin: 3rem 0 0; padding-top: 1.4rem;
+  border-top: 2px dashed var(--line);
+  color: var(--muted); font-size: .92rem;
+}
+.steam-note .hand { color: var(--accent); font-size: 1.35rem; margin-right: .4rem; }
+.steam-note .link { color: var(--text); font-size: inherit; }
+.steam-note .link::after { background-size: 100% 100%; }
+
+/* Un projet = un <article class="case"> : visuel d'un côté, texte de l'autre (alternés) */
+.case {
+  display: grid; grid-template-columns: 1.05fr 1fr; align-items: start;
+  gap: clamp(1.8rem, 4vw, 3.4rem);
+  padding-block: clamp(2.4rem, 5vw, 3.8rem);
+}
+.case + .case { border-top: 2px dashed var(--line); }
+.case:nth-of-type(even) .case-media { order: 2; }
+.case-media { position: sticky; top: 6.2rem; margin: 0; }
+.shot {
+  position: relative; overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--bg);
+  border: 3px solid var(--line);
+  border-radius: var(--wobbly);
+  transform: rotate(-1.2deg);
+  transition: transform .5s var(--ease), border-color .3s, box-shadow .4s;
+}
+.case:nth-of-type(even) .shot { transform: rotate(1deg); border-radius: var(--wobbly-2); }
+.case:hover .shot { transform: rotate(0); border-color: var(--accent); box-shadow: 8px 8px 0 rgba(255, 69, 0, .22); }
+.shot > img { position: absolute; inset: 0; z-index: 1; display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.case-media figcaption { margin-top: .9rem; text-align: center; color: var(--muted); font-size: .8rem; }
+.case-media .tape { width: 80px; height: 24px; margin-left: -40px; top: -13px; z-index: 2; }
+
+.case-num { display: block; color: var(--accent); font-size: 2.6rem; line-height: 1; margin-bottom: .2rem; transform: rotate(-3deg); transform-origin: left; }
+.case h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin: 0 0 .6rem; }
+.case-status { display: inline-block; margin: 0 0 1rem; padding: .05rem .8rem; border: 1.5px dashed var(--accent); border-radius: var(--wobbly); color: var(--accent); font-size: 1.15rem; transform: rotate(-1.5deg); }
+.case p { max-width: 58ch; }
+.case h3 { font-family: var(--font-hand); font-weight: 700; font-size: 1.5rem; color: var(--accent); margin: 1.6rem 0 .6rem; transform: rotate(-1deg); transform-origin: left; }
+
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.points li { position: relative; padding-left: 1.5rem; max-width: 58ch; }
+.points li::before { content: ""; position: absolute; left: 0; top: .72em; width: .8rem; height: 2px; background: var(--accent); border-radius: 2px; transform: rotate(-8deg); }
+
+.stack { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: .7rem; }
+.stack li { padding: .65rem .8rem; border: 1.5px dashed var(--line); border-radius: var(--wobbly-2); transition: border-color .3s, transform .3s var(--ease); }
+.stack li:hover { border-color: var(--accent); transform: rotate(-1deg) translateY(-2px); }
+.stack b { display: block; font-size: .85rem; color: var(--text); }
+.stack small { display: block; margin-top: .1rem; color: var(--muted); font-size: .74rem; line-height: 1.4; }
+
+.install {
+  display: inline-block; margin: 1.2rem 0 0; padding: .55rem .95rem;
+  background: var(--bg-2); border: 1.5px dashed var(--line); border-radius: var(--wobbly-2);
+  font-size: .82rem; overflow-wrap: anywhere;
+}
+.install .prompt { color: var(--accent); margin-right: .6ch; }
+.case-links { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
+.case .stat { margin: 1.1rem 0 0; }
+
+/* Dessin du hero de la page Projets */
+.scene .t { font-family: var(--font-hand); font-size: 30px; fill: var(--accent); stroke: none; }
+
+/* Machines secondaires (fin de la page Setup) */
+.devices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4rem 1.6rem; }
+.device {
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: 1.6rem 1.5rem 1.4rem;
+  background: var(--bg-2);
+  border: 2px solid var(--line); border-left: 6px solid var(--accent);
+  border-radius: var(--wobbly);
+  transition: transform .4s var(--ease), border-color .3s, box-shadow .4s;
+}
+.device:nth-child(3n+1) { transform: rotate(-.7deg); }
+.device:nth-child(3n+2) { transform: rotate(.6deg); border-radius: var(--wobbly-2); }
+.device:nth-child(3n+3) { transform: rotate(-.4deg); }
+.device:hover { transform: rotate(0) translateY(-6px); border-color: var(--accent); box-shadow: 8px 8px 0 rgba(255, 69, 0, .25); }
+.device .tool-ico { width: 56px; height: 56px; margin-bottom: .9rem; }
+.device .tool-ico .ico { width: 1.8rem; height: 1.8rem; }
+.device:hover .tool-ico { transform: rotate(-10deg) scale(1.08); border-color: var(--accent); }
+.device .k { display: block; margin: 0 0 .2rem; transform: rotate(-1.5deg); }
+.device b { display: block; font-family: var(--font-title); font-size: 1.35rem; font-weight: 600; line-height: 1.2; }
+.device .tags { margin: .8rem 0 0; }
+
+@media (max-width: 980px) {
+  .devices { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .case { grid-template-columns: 1fr; }
+  .case-media { position: static; }
+  .case:nth-of-type(even) .case-media { order: 0; }
+}
+@media (max-width: 640px) {
+  .devices { grid-template-columns: 1fr; }
+  .device:nth-child(n) { transform: none; }
+  .shot, .case:nth-of-type(even) .shot { transform: none; }
 }
 
 /* ---------- 19. Accessibilité : mouvement réduit ---------- */

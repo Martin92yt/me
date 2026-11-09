@@ -44,7 +44,7 @@
   ║                                                                  ║
   ║  Icônes disponibles (#nom) : i-tower i-chip i-gpu i-ram i-disk   ║
   ║  i-window i-monitor i-keyboard i-mouse i-pad i-headset i-mic     ║
-  ║  i-speaker i-webcam i-gamepad i-deck i-wheel                   ║
+  ║  i-speaker i-webcam i-gamepad i-deck i-wheel i-laptop i-tablet  ║
   ╚══════════════════════════════════════════════════════════════════╝
 -->
 
@@ -64,6 +64,8 @@
     <symbol id="i-gpu" viewBox="0 0 48 48"><rect x="4" y="12" width="40" height="22" rx="3"/><circle cx="17" cy="23" r="6"/><circle cx="33" cy="23" r="6"/><path d="M9 34v5M17 34v5"/></symbol>
     <symbol id="i-ram" viewBox="0 0 48 48"><rect x="4" y="13" width="40" height="17" rx="2"/><path d="M10 20h5M21 20h5M32 20h5M9 30v6M16 30v6M23 30v6M30 30v6M37 30v6"/></symbol>
     <symbol id="i-disk" viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="22" rx="3"/><path d="M12 29h12M34 29h.1M34 22h.1"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 48 48"><path d="M9 31V12a2 2 0 0 1 2-2h26a2 2 0 0 1 2 2v19"/><path d="M9 31h30M4 37h40l-2.5 3h-35z"/></symbol>
+    <symbol id="i-tablet" viewBox="0 0 48 48"><rect x="9" y="6" width="30" height="21" rx="2.5"/><path d="M12 31h24M7 36h34l-1.5 3h-31z"/></symbol>
     <symbol id="i-window" viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="4"/><path d="M6 17h36M12 12.5h.1M17 12.5h.1"/></symbol>
 
     <!-- Écrans & périphériques -->
@@ -102,7 +104,7 @@
       <a href="index.html#a-propos">À propos</a>
       <a href="index.html#competences">Compétences</a>
       <a href="index.html#outils">Outils</a>
-      <a href="index.html#projets">Projets</a>
+      <a href="projets.html" class="nav-page">Projets</a>
       <a href="index.html#passions">Passions</a>
       <a href="index.html#reseaux">Réseaux</a>
       <a href="index.html#discord">Contact</a>
@@ -318,6 +320,45 @@
 
       </div>
 
+    </div>
+  </section>
+
+  <!-- ============ MES AUTRES MACHINES (fin de page) ============ -->
+  <section id="machines" class="section band">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="hand kicker">et ailleurs ?</p>
+        <h2>Mes machines &amp; systèmes</h2>
+        <p class="section-sub">Mon PC principal et les autres appareils que j'utilise, avec leur système.</p>
+      </header>
+
+      <div class="devices">
+
+        <!-- ========== APPAREIL = un <article class="device reveal"> ==========
+             <span class="hand k"> = petit titre · <b> = nom · <p class="tags"> = système (un ou plusieurs <span>) -->
+        <article class="device reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-tower"/></svg></span>
+          <span class="hand k">principal</span>
+          <b>Mon PC principal</b>
+          <p class="tags"><span>Windows 11</span></p>
+        </article>
+
+        <article class="device reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-tablet"/></svg></span>
+          <span class="hand k">2-en-1</span>
+          <b>Lenovo Miix 520</b>
+          <p class="tags"><span>Windows 11</span></p>
+        </article>
+
+        <article class="device reveal">
+          <span class="tool-ico"><svg class="ico"><use href="#i-laptop"/></svg></span>
+          <span class="hand k">portable</span>
+          <b>Chromebook</b>
+          <p class="tags"><span>ChromeOS</span></p>
+        </article>
+
+      </div>
+
       <p class="hand" style="margin-top:3.5rem">
         <a href="index.html" class="link">← retour à l'accueil</a>
       </p>
@@ -344,7 +385,7 @@
       <a href="index.html#a-propos">À propos</a>
       <a href="index.html#competences">Compétences</a>
       <a href="index.html#outils">Outils</a>
-      <a href="index.html#projets">Projets</a>
+      <a href="projets.html">Projets</a>
       <a href="index.html#passions">Passions</a>
       <a href="index.html#reseaux">Réseaux</a>
       <a href="index.html#discord">Contact</a>

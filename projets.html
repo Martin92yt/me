@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projets — Martin92yt</title>
+  <meta name="description" content="Les projets de Martin92yt : Gifuto (API REST de GIFs d'anime), dragons-of-legends.js (librairie NPM) et ce portfolio.">
+  <meta name="theme-color" content="#18181B">
+  <meta name="author" content="Martin92yt">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Martin92yt">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Projets — Martin92yt">
+  <meta property="og:description" content="Gifuto, dragons-of-legends.js et ce portfolio : stack, descriptions et liens.">
+  <meta property="og:image" content="images/avatar.gif">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/gif" href="images/avatar.gif">
+  <link rel="apple-touch-icon" href="images/avatar.gif">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  MODE D'EMPLOI : AJOUTER OU MODIFIER UN PROJET                   ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║  Un projet = un bloc <article class="case"> à copier / coller.   ║
+  ║  Les visuels sont alternés gauche / droite automatiquement.      ║
+  ║                                                                  ║
+  ║  CAPTURES D'ÉCRAN : dépose-les dans  images/projects/            ║
+  ║    gifuto.png · dragons-of-legends.png · portfolio.png           ║
+  ║  (format conseillé 16:10, par exemple 1600 × 1000 px).           ║
+  ║  Tant que le fichier n'existe pas, un dessin de remplacement     ║
+  ║  s'affiche à la place.                                           ║
+  ║                                                                  ║
+  ║  Dans un bloc :                                                  ║
+  ║    <h3>En bref</h3>  + <ul class="points">  → points clés        ║
+  ║    <h3>Stack</h3>    + <ul class="stack">   → technologies       ║
+  ║    <div class="case-links">                 → boutons / liens    ║
+  ║  Chaque <li> est une ligne à copier, modifier ou supprimer.      ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+
+<!-- ============ SPRITE D'ICÔNES DESSINÉES À LA MAIN ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+    </filter>
+
+    <symbol id="flag-fr" viewBox="0 0 30 20"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#EF4135"/></symbol>
+
+    <symbol id="i-arrow" viewBox="0 0 48 48"><path d="M6 24h34M28 12l12 12-12 12"/></symbol>
+    <symbol id="i-npm" viewBox="0 0 48 48"><path d="M24 6 40 14v20l-16 8L8 34V14z"/><path d="m8 14 16 8 16-8M24 22v20"/></symbol>
+    <symbol id="i-repo" viewBox="0 0 48 48"><path d="M10 40V10a4 4 0 0 1 4-4h24v30H14a4 4 0 0 0-4 4zm0 0a4 4 0 0 0 4 4h24"/><path d="M20 14h12M20 21h8"/></symbol>
+    <symbol id="i-image" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="4"/><path d="M6 34l11-9 9 7 7-5 9 7"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#top">Aller au contenu</a>
+<div class="progress" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="Martin92yt — accueil" title="Martin92yt · Français">
+      <span class="brand-avatar">
+        <img src="images/avatar.gif" alt="" width="44" height="44" decoding="async">
+        <svg class="flag" role="img" aria-label="Drapeau français"><use href="#flag-fr"/></svg>
+      </span>
+      <span class="brand-name">Martin92yt</span>
+    </a>
+
+    <span id="menu" class="menu-anchor" aria-hidden="true"></span>
+    <span id="menu-closed" class="menu-anchor" aria-hidden="true"></span>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html#a-propos">À propos</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="index.html#outils">Outils</a>
+      <a href="projets.html" class="nav-page" aria-current="page">Projets</a>
+      <a href="index.html#passions">Passions</a>
+      <a href="index.html#reseaux">Réseaux</a>
+      <a href="index.html#discord">Contact</a>
+      <a href="setup.html" class="nav-page">Setup</a>
+    </nav>
+
+    <a class="menu-backdrop" href="#menu-closed" aria-label="Fermer le menu" tabindex="-1"></a>
+    <a class="burger burger-open" href="#menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></a>
+    <a class="burger burger-close" href="#menu-closed" aria-label="Fermer le menu"><span></span><span></span></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ INTRO ============ -->
+  <section class="page-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="hand kicker">ce que je construis</p>
+        <h1>Mes <em>projets</em></h1>
+        <p class="lead">Une API, une librairie open source et ce site : ce que j'ai construit, avec quoi, et où le trouver.</p>
+        <p class="tags glance"><span>API REST</span><span>Librairie NPM</span><span>HTML/CSS pur</span></p>
+      </div>
+
+      <!-- Dessin décoratif : un terminal, un paquet npm -->
+      <svg class="scene" viewBox="0 0 480 290" role="img" aria-label="Dessin d'un terminal qui envoie un paquet npm.">
+        <rect x="30" y="50" width="220" height="170" rx="10"/>
+        <path d="M30 82h220M46 66h.1M60 66h.1M74 66h.1"/>
+        <path class="acc" d="M48 110l12 10-12 10"/>
+        <path d="M72 120h92M48 158h132M48 182h84"/>
+        <path d="M260 148c20-8 38-4 52 8M300 144l12 12-16 4" class="acc"/>
+        <path d="M320 145l50-25 50 25-50 25z"/>
+        <path d="M320 145v60l50 25v-60M420 145v60l-50 25"/>
+        <path class="acc" d="M345 132l50 25"/>
+        <path class="acc" d="M440 40c1 8 5 12 13 13-8 1-12 5-13 13-1-8-5-12-13-13 8-1 12-5 13-13z"/>
+        <text class="t" x="322" y="86" transform="rotate(-6 322 86)">npm i</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ LES PROJETS ============ -->
+  <section id="liste" class="section">
+    <div class="wrap">
+
+      <!-- ========== PROJET 01 : Gifuto ========== -->
+      <article class="case" id="gifuto">
+        <figure class="case-media reveal">
+          <span class="tape"></span>
+          <div class="shot">
+            <div class="ph ph-ani" aria-hidden="true"><svg class="ico"><use href="#i-image"/></svg><span>capture à ajouter</span></div>
+            <img src="images/projects/gifuto.png" alt="" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.hidden=true">
+          </div>
+          <figcaption>Gifuto : page d'accueil du site</figcaption>
+        </figure>
+
+        <div class="case-body reveal">
+          <span class="hand case-num">01</span>
+          <h2>Gifuto</h2>
+          <p class="hand case-status">nouveau · en ligne</p>
+
+          <p>Gifuto est une <strong>API REST</strong> et un <strong>indexeur communautaire de GIFs d'anime</strong>. L'idée : offrir aux bots Discord et aux projets web une source de GIFs propre, rangée par catégorie et simple à interroger, pour des commandes d'interaction comme <code>/hug</code>, <code>/kiss</code> ou <code>/pat</code>.</p>
+          <p>Les GIFs sont proposés par la communauté, puis indexés et catégorisés. Le site est rendu côté serveur avec EJS, et un package npm, <code>gifuto.js</code>, permet de l'utiliser dans un projet.</p>
+          <p class="stat"><strong>300</strong> téléchargements npm en une seule journée</p>
+
+          <h3>En bref</h3>
+          <ul class="points">
+            <li>API REST pour récupérer des GIFs d'anime par catégorie</li>
+            <li>Soumission communautaire, puis indexation et catégorisation</li>
+            <li>Pensée pour les bots Discord et les projets web</li>
+            <li>Package npm <code>gifuto.js</code> pour l'intégrer facilement</li>
+          </ul>
+
+          <h3>Stack</h3>
+          <ul class="stack">
+            <li><b>TypeScript</b><small>code typé, côté serveur</small></li>
+            <li><b>Express.js</b><small>serveur et routes de l'API</small></li>
+            <li><b>Prisma</b><small>accès à la base de données</small></li>
+            <li><b>EJS</b><small>pages du site (templates)</small></li>
+            <li><b>Neon PostgreSQL</b><small>base de données</small></li>
+          </ul>
+
+          <p class="install"><span class="prompt">$</span>npm install gifuto.js</p>
+
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://gifuto.vercel.app" target="_blank" rel="noopener">Voir le site <svg class="ico"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="https://www.npmjs.com/package/gifuto.js" target="_blank" rel="noopener"><svg class="ico"><use href="#i-npm"/></svg> gifuto.js sur NPM</a>
+            <!-- Dépôt GitHub de Gifuto : décommente et mets le bon lien.
+            <a class="btn btn-ghost" href="https://github.com/Martin92yt/NOM-DU-DEPOT" target="_blank" rel="noopener"><svg class="ico"><use href="#i-repo"/></svg> GitHub</a>
+            -->
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== PROJET 02 : dragons-of-legends.js ========== -->
+      <article class="case" id="dragons-of-legends">
+        <figure class="case-media reveal">
+          <span class="tape"></span>
+          <div class="shot">
+            <div class="ph ph-sat" aria-hidden="true"><svg class="ico"><use href="#i-image"/></svg><span>capture à ajouter</span></div>
+            <img src="images/projects/dragons-of-legends.png" alt="" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.hidden=true">
+          </div>
+          <figcaption>dragons-of-legends.js : page du package sur NPM</figcaption>
+        </figure>
+
+        <div class="case-body reveal">
+          <span class="hand case-num">02</span>
+          <h2>dragons-of-legends.js</h2>
+
+          <p>Une <strong>librairie NPM open source</strong> conçue pour simplifier la création d'APIs pour des serveurs MMORPG. Elle donne une base pour construire des APIs autour d'un serveur de jeu, sans repartir de zéro.</p>
+          <p class="stat"><strong>2&nbsp;500+</strong> téléchargements</p>
+
+          <h3>En bref</h3>
+          <ul class="points">
+            <li>Open source, publiée sur NPM</li>
+            <li>Écrite en TypeScript</li>
+            <li>Pensée pour les développeurs de serveurs MMORPG</li>
+          </ul>
+
+          <h3>Stack</h3>
+          <ul class="stack">
+            <li><b>TypeScript</b><small>code de la librairie</small></li>
+            <li><b>NPM</b><small>publication et distribution</small></li>
+          </ul>
+
+          <p class="install"><span class="prompt">$</span>npm install dragons-of-legends.js</p>
+
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://www.npmjs.com/package/dragons-of-legends.js" target="_blank" rel="noopener"><svg class="ico"><use href="#i-npm"/></svg> Voir sur NPM</a>
+            <a class="btn btn-ghost" href="https://github.com/Martin92yt/DragonsOfLegends.js" target="_blank" rel="noopener"><svg class="ico"><use href="#i-repo"/></svg> GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== PROJET 03 : ce portfolio ========== -->
+      <article class="case" id="ce-portfolio">
+        <figure class="case-media reveal">
+          <span class="tape"></span>
+          <div class="shot">
+            <div class="ph ph-mc" aria-hidden="true"><svg class="ico"><use href="#i-image"/></svg><span>capture à ajouter</span></div>
+            <img src="images/projects/portfolio.png" alt="" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.hidden=true">
+          </div>
+          <figcaption>Ce portfolio : page d'accueil</figcaption>
+        </figure>
+
+        <div class="case-body reveal">
+          <span class="hand case-num">03</span>
+          <h2>Ce portfolio</h2>
+
+          <p>Un portfolio personnel <strong>sur-mesure</strong>, développé en HTML et CSS pur, axé sur le minimalisme et la performance. Pas de framework : chaque icône, chaque animation et chaque page est écrite à la main.</p>
+
+          <h3>En bref</h3>
+          <ul class="points">
+            <li>Menu mobile et fenêtres légales entièrement en CSS</li>
+            <li>Icônes SVG dessinées à la main, avec un filtre « trait de crayon »</li>
+            <li>Animations discrètes, qui respectent le réglage « réduire les animations »</li>
+            <li>Responsive de 320 à 1440 px</li>
+            <li>Polices et images hébergées avec le site : aucun service tiers au chargement</li>
+          </ul>
+
+          <h3>Stack</h3>
+          <ul class="stack">
+            <li><b>HTML5</b><small>structure sémantique</small></li>
+            <li><b>CSS3</b><small>mise en page, thème, animations</small></li>
+            <li><b>SVG</b><small>icônes dessinées à la main</small></li>
+            <li><b>Vercel</b><small>hébergement</small></li>
+          </ul>
+
+          <div class="case-links">
+            <a class="btn btn-primary" href="index.html">Voir l'accueil <svg class="ico"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="https://github.com/Martin92yt/me" target="_blank" rel="noopener"><svg class="ico"><use href="#i-repo"/></svg> Code source</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ APPEL À CONTACT ============ -->
+  <section class="section band">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="hand kicker">une idée ?</p>
+        <h2>Un projet en tête ?</h2>
+        <p class="section-sub">Question, idée ou simple discussion code : le plus rapide reste un message sur Discord.</p>
+      </header>
+      <p class="section-cta reveal"><a class="btn btn-discord" href="https://discord.com/users/1197913159558779050" target="_blank" rel="noopener">Me contacter sur Discord</a></p>
+      <p class="hand" style="margin-top:3rem"><a href="index.html" class="link">← retour à l'accueil</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="f-brand">
+      <a class="brand brand-sm" href="index.html" aria-label="Martin92yt — accueil">
+        <span class="brand-avatar">
+          <img src="images/avatar.gif" alt="" width="38" height="38" loading="lazy" decoding="async">
+        </span>
+        <span class="brand-name">Martin92yt</span>
+      </a>
+      <p><svg class="flag flag-inline" role="img" aria-label="Drapeau français"><use href="#flag-fr"/></svg>Développeur français, TypeScript avant tout. Site conçu et codé à la main en HTML5 et CSS3, sans framework.</p>
+    </div>
+
+    <nav class="f-col" aria-label="Plan du site">
+      <h4>Naviguer</h4>
+      <a href="index.html#a-propos">À propos</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="index.html#outils">Outils</a>
+      <a href="projets.html" aria-current="page">Projets</a>
+      <a href="index.html#passions">Passions</a>
+      <a href="index.html#reseaux">Réseaux</a>
+      <a href="index.html#discord">Contact</a>
+      <a href="setup.html">Setup (matériel)</a>
+    </nav>
+
+    <nav class="f-col" aria-label="Informations légales">
+      <h4>Informations</h4>
+      <a href="index.html#mentions-legales">Mentions légales</a>
+      <a href="index.html#confidentialite">Politique de confidentialité</a>
+      <a href="https://www.npmjs.com/package/dragons-of-legends.js" target="_blank" rel="noopener">NPM</a>
+    </nav>
+  </div>
+
+  <div class="wrap f-bottom">
+    <p>© 2026 Martin92yt — Tous droits réservés.</p>
+    <p class="hand">Fait avec ♥, du café et zéro framework.</p>
+    <p class="credits">Polices : Fraunces, Caveat, Space Mono (licence OFL) · Avatar : objet de la boutique Steam (Valve), acquis légalement · Hébergé sur Vercel.</p>
+  </div>
+</footer>
+
+<!-- Apparition au défilement (facultatif : sans ce script, tout reste visible) -->
+<script>
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+  try {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    document.documentElement.classList.add('io');
+    items.forEach(function (el) { io.observe(el); });
+  } catch (err) {
+    document.documentElement.classList.remove('io');
+  }
+})();
+</script>
+
+</body>
+</html>
