@@ -26,7 +26,7 @@ A REST API and a community-driven index of anime GIFs, built for Discord bots an
 
 ### dragons-of-legends.js
 
-An open source NPM library that simplifies building APIs for MMORPG servers, written in TypeScript. It has more than 2,500 downloads.
+An open source NPM library that simplifies building APIs for MMORPG servers, written in TypeScript. It has more than 2,900 downloads.
 
 - **npm**: https://www.npmjs.com/package/dragons-of-legends.js
 - **Repository**: https://github.com/Martin92yt/DragonsOfLegends.js

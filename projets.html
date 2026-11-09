@@ -58,6 +58,9 @@
     <symbol id="i-arrow" viewBox="0 0 48 48"><path d="M6 24h34M28 12l12 12-12 12"/></symbol>
     <symbol id="i-npm" viewBox="0 0 48 48"><path d="M24 6 40 14v20l-16 8L8 34V14z"/><path d="m8 14 16 8 16-8M24 22v20"/></symbol>
     <symbol id="i-repo" viewBox="0 0 48 48"><path d="M10 40V10a4 4 0 0 1 4-4h24v30H14a4 4 0 0 0-4 4zm0 0a4 4 0 0 0 4 4h24"/><path d="M20 14h12M20 21h8"/></symbol>
+    <symbol id="i-server" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="12" rx="3"/><rect x="8" y="26" width="32" height="12" rx="3"/><path d="M15 14h.1M15 32h.1M24 14h10M24 32h10"/></symbol>
+    <symbol id="i-web" viewBox="0 0 48 48"><path d="M16 14 5 24l11 10M32 14l11 10-11 10M27 8l-6 32"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 48 48"><path d="M6 9h36v24H23l-10 8v-8H6z"/><circle cx="16" cy="21" r="1.4"/><circle cx="24" cy="21" r="1.4"/><circle cx="32" cy="21" r="1.4"/></symbol>
     <symbol id="i-image" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="4"/><path d="M6 34l11-9 9 7 7-5 9 7"/></symbol>
   </defs>
 </svg>
@@ -193,7 +196,7 @@
           <h2>dragons-of-legends.js</h2>
 
           <p>Une <strong>librairie NPM open source</strong> conçue pour simplifier la création d'APIs pour des serveurs MMORPG. Elle donne une base pour construire des APIs autour d'un serveur de jeu, sans repartir de zéro.</p>
-          <p class="stat"><strong>2&nbsp;500+</strong> téléchargements</p>
+          <p class="stat"><strong>2&nbsp;900+</strong> téléchargements</p>
 
           <h3>En bref</h3>
           <ul class="points">
@@ -261,16 +264,41 @@
     </div>
   </section>
 
-  <!-- ============ APPEL À CONTACT ============ -->
-  <section class="section band">
-    <div class="wrap">
-      <header class="section-head reveal">
-        <p class="hand kicker">une idée ?</p>
+  <!-- ============ UN PROJET EN TÊTE ? ============ -->
+  <section id="contact-projet" class="section band">
+    <div class="wrap work-grid">
+
+      <div class="work-intro reveal">
+        <p class="hand kicker">travaillons ensemble</p>
         <h2>Un projet en tête ?</h2>
-        <p class="section-sub">Question, idée ou simple discussion code : le plus rapide reste un message sur Discord.</p>
-      </header>
-      <p class="section-cta reveal"><a class="btn btn-discord" href="https://discord.com/users/1197913159558779050" target="_blank" rel="noopener">Me contacter sur Discord</a></p>
-      <p class="hand" style="margin-top:3rem"><a href="index.html" class="link">← retour à l'accueil</a></p>
+        <p class="lead">Une API, une librairie ou un site à construire ? Décris-moi ton idée : on voit ensemble ce qui est réaliste et comment je peux t'aider.</p>
+
+        <ol class="steps">
+          <li><b>Tu m'écris sur Discord</b><span>Quelques lignes suffisent : le contexte, l'objectif, les contraintes.</span></li>
+          <li><b>On en discute</b><span>On précise le besoin et on choisit les bons outils.</span></li>
+          <li><b>Je te réponds franchement</b><span>Ce que je peux faire, comment, et ce qui vaut mieux ailleurs.</span></li>
+        </ol>
+      </div>
+
+      <aside class="work-side reveal" aria-label="Domaines et contact">
+        <span class="tape"></span>
+        <h3>Sur quoi je peux t'aider</h3>
+        <ul class="can">
+          <li><span class="tool-ico"><svg class="ico"><use href="#i-server"/></svg></span><span><b>APIs REST &amp; back-end</b><small>TypeScript, Express.js, Prisma</small></span></li>
+          <li><span class="tool-ico"><svg class="ico"><use href="#i-npm"/></svg></span><span><b>Librairies &amp; packages npm</b><small>conception, TypeScript, publication</small></span></li>
+          <li><span class="tool-ico"><svg class="ico"><use href="#i-web"/></svg></span><span><b>Sites web sur-mesure</b><small>HTML et CSS purs, sans framework</small></span></li>
+        </ul>
+
+        <div class="work-cta">
+          <a class="btn btn-discord" href="https://discord.com/users/1197913159558779050" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg> Écrire sur Discord</a>
+          <p>Mon tag : <code>.player_green</code></p>
+          <p>Contact exclusivement via Discord.</p>
+        </div>
+      </aside>
+
+    </div>
+    <div class="wrap">
+      <p class="hand" style="margin-top:3.5rem"><a href="index.html" class="link">← retour à l'accueil</a></p>
     </div>
   </section>
 
