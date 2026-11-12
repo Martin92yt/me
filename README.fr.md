@@ -53,6 +53,7 @@ Codé à la main en HTML et CSS, axé sur le minimalisme et la performance. Code
 ├── index.html          # accueil
 ├── projets.html        # projets
 ├── setup.html          # matériel
+├── 404.html            # page introuvable (servie par Vercel)
 ├── style.css           # commun à toutes les pages
 ├── LICENSE
 ├── README.md           # anglais (par défaut)

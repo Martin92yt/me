@@ -53,6 +53,7 @@ Hand-coded in HTML and CSS, focused on minimalism and performance. Source code: 
 ├── index.html          # home
 ├── projets.html        # projects
 ├── setup.html          # hardware / setup
+├── 404.html            # not-found page (served by Vercel)
 ├── style.css           # shared by all pages
 ├── LICENSE
 ├── README.md           # English (default)

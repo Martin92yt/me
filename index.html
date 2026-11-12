@@ -88,6 +88,7 @@
     <!-- Bulle de message avec "points de frappe" (dessin original) -->
     <symbol id="i-chat" viewBox="0 0 48 48"><path d="M6 9h36v24H23l-10 8v-8H6z"/><circle cx="16" cy="21" r="1.4"/><circle cx="24" cy="21" r="1.4"/><circle cx="32" cy="21" r="1.4"/></symbol>
     <symbol id="i-yt" viewBox="0 0 48 48"><rect x="5" y="11" width="38" height="26" rx="8"/><path d="m20 18 11 6-11 6z"/></symbol>
+    <symbol id="i-pad" viewBox="0 0 48 48"><path d="M14 13h20a9 9 0 0 1 9 8l2 11a4.5 4.5 0 0 1-8 3l-4-5H15l-4 5a4.5 4.5 0 0 1-8-3l2-11a9 9 0 0 1 9-8z"/><path d="M15 20v7M11.5 23.5h7"/><circle cx="31" cy="21" r="1.4"/><circle cx="35.5" cy="26" r="1.4"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 48 48"><path d="M6 24h34M28 12l12 12-12 12"/></symbol>
   </defs>
 </svg>
@@ -143,22 +144,20 @@
   <section id="a-propos" class="section hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <p class="eyebrow"><svg class="flag flag-inline" role="img" aria-label="Drapeau français"><use href="#flag-fr"/></svg>Martin92yt <span>·</span> Développeur TypeScript</p>
-        <h1>Je construis des APIs et des librairies TypeScript, <em>propres</em> et lisibles.</h1>
+        <p class="hand kicker">Salut, moi c'est…</p>
+        <h1>Martin92yt,<br>je <em>bricole</em> du code<br>à la main.</h1>
         <p class="lead">
-          Développeur français, j'écris surtout en <strong>TypeScript</strong>. J'aime comprendre ce qui se passe
-          sous le capot : peu de magie, pas de framework empilé par réflexe, du code lisible et pensé avec soin.
+          Je suis français et je code surtout en <strong>TypeScript</strong>. J'apprends Java et Python à côté.
+          J'aime comprendre comment les choses marchent sous le capot, alors j'évite d'empiler les frameworks par réflexe.
+        </p>
+        <p>
+          Je publie ce que je fais en open source : <strong>dragons-of-legends.js</strong>, une librairie npm
+          qui a dépassé les 2&nbsp;900 téléchargements, <strong>Gifuto</strong>, et ce site, écrit à la main.
         </p>
         <div class="hero-cta">
           <a href="projets.html" class="btn btn-primary">Voir mes projets <svg class="ico"><use href="#i-arrow"/></svg></a>
-          <a href="#discord" class="btn btn-ghost">Me contacter sur Discord</a>
+          <a href="#discord" class="btn btn-ghost">Me parler sur Discord</a>
         </div>
-        <!-- Chiffres : modifie les valeurs ici quand elles évoluent -->
-        <ul class="proof" aria-label="Quelques chiffres">
-          <li><strong>2&nbsp;900+</strong><span>téléchargements npm</span><small>dragons-of-legends.js</small></li>
-          <li><strong>300</strong><span>téléchargements en un jour</span><small>gifuto.js</small></li>
-          <li><strong>2</strong><span>packages publiés</span><small>open source, sur npm</small></li>
-        </ul>
       </div>
 
       <figure class="portrait">
@@ -185,10 +184,25 @@
           <figcaption class="hand">code, café &amp; Discord ☕</figcaption>
         </div>
         <span class="tape"></span>
-        <span class="sticker sticker-ts" aria-hidden="true">&lt;/&gt; TypeScript</span>
-        <span class="sticker sticker-os" aria-hidden="true">open source</span>
         <p class="hand note-arrow">(mon avatar Discord)</p>
       </figure>
+    </div>
+  </section>
+
+  <!-- ============ EN CE MOMENT ============ -->
+  <!-- À modifier quand ça change : une ligne = un <li>. Pense à mettre à jour la date. -->
+  <section id="en-ce-moment" class="section now-sec">
+    <div class="wrap">
+      <aside class="now reveal" aria-label="En ce moment">
+        <span class="tape"></span>
+        <h2 class="hand">en ce moment</h2>
+        <ul>
+          <li><b>J'apprends</b> Java et Python, à côté de TypeScript.</li>
+          <li><b>Je publie</b> sur npm : dragons-of-legends.js et gifuto.js.</li>
+          <li><b>Je retouche</b> ce site, qui n'est jamais tout à fait fini.</li>
+        </ul>
+        <p class="hand now-date">mis à jour en novembre 2026</p>
+      </aside>
     </div>
   </section>
 
@@ -422,7 +436,7 @@
       <header class="section-head reveal">
         <p class="hand kicker">où me trouver</p>
         <h2>Me retrouver</h2>
-        <p class="section-sub">Mes profils, au même endroit. Discord reste le plus rapide.</p>
+        <p class="section-sub">Là où je traîne en ligne. Pour me parler, c'est Discord.</p>
       </header>
 
       <div class="socials">
@@ -454,6 +468,18 @@
           <svg class="ico s-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
         </a>
 
+        <a class="social reveal" href="https://www.npmjs.com/package/gifuto.js" target="_blank" rel="noopener">
+          <svg class="ico ico-lg"><use href="#i-npm"/></svg>
+          <span class="s-text"><b>NPM</b><small>gifuto.js</small></span>
+          <svg class="ico s-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+
+        <a class="social reveal" href="https://steamcommunity.com/id/Martin92yt/" target="_blank" rel="noopener">
+          <svg class="ico ico-lg"><use href="#i-pad"/></svg>
+          <span class="s-text"><b>Steam</b><small>Martin92yt</small></span>
+          <svg class="ico s-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+
       </div>
     </div>
   </section>
@@ -464,11 +490,11 @@
       <div class="discord-card reveal">
         <svg class="ico ico-xl" aria-hidden="true"><use href="#i-chat"/></svg>
         <div class="discord-text">
-          <p class="hand kicker">message direct</p>
-          <h2>Parlons sur Discord</h2>
+          <p class="hand kicker">un petit message, c'est tout</p>
+          <h2>On en parle sur Discord ?</h2>
           <p>
-            Mon canal principal de communication. Question, projet ou simple discussion code ?
-            Envoie-moi un message direct sur Discord.
+            C'est mon seul moyen de contact. Une question sur un de mes projets, un bug qui t'embête,
+            ou juste envie de parler dev ou jeux : écris-moi.
           </p>
           <p class="discord-id-label">Mon identifiant Discord</p>
           <p class="discord-id"><span class="at">.</span>player_green</p>
@@ -477,6 +503,7 @@
             <a class="btn btn-discord" href="https://discord.com/users/1197913159558779050" target="_blank" rel="noopener">
               Ouvrir Discord <svg class="ico"><use href="#i-arrow"/></svg>
             </a>
+            <a class="link" href="https://steamcommunity.com/id/Martin92yt/" target="_blank" rel="noopener">ou ajoute-moi sur Steam →</a>
           </div>
         </div>
       </div>
