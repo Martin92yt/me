@@ -5,7 +5,7 @@
 @font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
 
 /* =====================================================
-   PORTFOLIO — "artisan du code"
+   PORTFOLIO
    HTML5 + CSS3 pur (un mini filet de sécurité JS est
    fourni dans index.html pour l'apparition au scroll
    sur les vieux navigateurs, et il est facultatif).
@@ -30,11 +30,15 @@
   --font-hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
   --font-body: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
-  --wobbly: 255px 15px 225px 15px / 15px 225px 15px 255px;
-  --wobbly-2: 15px 225px 15px 255px / 225px 15px 255px 15px;
+  /* Petits éléments (boutons, pastilles) : coins très arrondis, un peu irréguliers */
+  --pill: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  --pill-2: 15px 225px 15px 255px / 225px 15px 255px 15px;
+  /* Grandes cartes : coins discrets et à peine irréguliers (les grands rayons déformaient les bords) */
+  --wobbly: 10px 7px 12px 8px / 8px 12px 7px 10px;
+  --wobbly-2: 7px 12px 8px 10px / 12px 8px 10px 7px;
   --ease: cubic-bezier(.2, .8, .2, 1);
 
-  /* Trait de soulignement dessiné à la main (réutilisé partout) */
+  /* Trait de soulignement façon crayon (réutilisé partout) */
   --scribble: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6' preserveAspectRatio='none'%3E%3Cpath d='M1 3c15-3 30 3 48 0s35 3 50 0' fill='none' stroke='%23FF4500' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
 
 }
@@ -107,7 +111,7 @@ h1 em::after {
 }
 .skip:focus { left: 8px; }
 
-/* ---------- 3. Icônes dessinées à la main ---------- */
+/* ---------- 3. Icônes ---------- */
 .ico {
   width: 1.3em; height: 1.3em;
   fill: none;
@@ -242,7 +246,7 @@ h1 em::after {
           mask-image: linear-gradient(transparent, #000 14%, #000 86%, transparent);
 }
 
-/* Séparateurs ondulés tracés à la main. Ils glissent très lentement sur l'axe X :
+/* Séparateurs ondulés. Ils glissent très lentement sur l'axe X :
    le motif fait exactement 140 px, donc la boucle est parfaitement continue. */
 .band::after,
 .site-footer::before {
@@ -260,7 +264,7 @@ h1 em::after {
   font-family: var(--font-body); font-weight: 700; font-size: .92rem;
   padding: .85rem 1.5rem;
   border: 2px solid var(--accent);
-  border-radius: var(--wobbly);
+  border-radius: var(--pill);
   color: var(--text);
   transition: transform .3s var(--ease), background .3s, color .3s;
   isolation: isolate;
@@ -270,7 +274,7 @@ h1 em::after {
   content: "";
   position: absolute; inset: -5px -4px -4px -5px;
   border: 1.5px solid var(--accent-2);
-  border-radius: var(--wobbly-2);
+  border-radius: var(--pill-2);
   opacity: 0;
   transform: scale(.94) rotate(-1.5deg);
   transition: opacity .3s, transform .45s var(--ease);
@@ -367,14 +371,14 @@ h1 em::after {
   padding: 1rem 1.4rem 1rem 1.1rem;
   background: var(--bg-2);
   border: 2px solid var(--line);
-  border-radius: var(--wobbly);
+  border-radius: var(--pill);
   transition: transform .35s var(--ease), border-color .3s, background .3s;
 }
 .chip .ico { grid-row: span 2; width: 2.3rem; height: 2.3rem; color: var(--accent); transition: transform .5s var(--ease); }
 .chip b { font-family: var(--font-title); font-size: 1.1rem; font-weight: 600; line-height: 1.2; }
 .chip small { color: var(--muted); font-size: .75rem; }
 .chip:nth-child(odd)  { transform: rotate(-1.2deg); }
-.chip:nth-child(even) { transform: rotate(1deg); border-radius: var(--wobbly-2); }
+.chip:nth-child(even) { transform: rotate(1deg); border-radius: var(--pill-2); }
 .chip:hover { transform: rotate(0) translateY(-5px); border-color: var(--accent); background: var(--bg-3); }
 .chip:hover .ico { transform: rotate(-12deg) scale(1.15); }
 
@@ -960,7 +964,7 @@ h1 em::after {
 
 .case-num { display: block; color: var(--accent); font-size: 2.6rem; line-height: 1; margin-bottom: .2rem; transform: rotate(-3deg); transform-origin: left; }
 .case h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin: 0 0 .6rem; }
-.case-status { display: inline-block; margin: 0 0 1rem; padding: .05rem .8rem; border: 1.5px dashed var(--accent); border-radius: var(--wobbly); color: var(--accent); font-size: 1.15rem; transform: rotate(-1.5deg); }
+.case-status { display: inline-block; margin: 0 0 1rem; padding: .05rem .8rem; border: 1.5px dashed var(--accent); border-radius: var(--pill); color: var(--accent); font-size: 1.15rem; transform: rotate(-1.5deg); }
 .case p { max-width: 58ch; }
 .case h3 { font-family: var(--font-hand); font-weight: 700; font-size: 1.5rem; color: var(--accent); margin: 1.6rem 0 .6rem; transform: rotate(-1deg); transform-origin: left; }
 
@@ -1026,6 +1030,9 @@ h1 em::after {
 .outro h2 { margin-bottom: .6rem; }
 .outro p:not(.kicker) { color: var(--muted); }
 .outro code { font-family: var(--font-body); color: var(--text); background: var(--bg); border: 1px dashed var(--line); border-radius: 4px; padding: .05em .4em; }
+
+.hero-honest { color: var(--muted); font-size: .95rem; margin-top: -.2rem; }
+.hero-honest strong { color: var(--text); }
 
 /* Page 404 */
 .lost { text-align: left; }

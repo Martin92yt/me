@@ -2,9 +2,9 @@
 
 🇫🇷 [Version française](README.fr.md)
 
-My personal portfolio, written **by hand** in pure HTML5 and CSS3: no framework, no library, almost no JavaScript.
+My personal portfolio in pure HTML5 and CSS3: no framework, no library, almost no JavaScript. I vibe-code: I direct my projects and AI helps me write the code.
 
-Art direction: "artisan-coder". Dark background, orange accent, hand-drawn SVG icons, subtle CSS micro-animations.
+Art direction: dark background, orange accent, SVG icons with a "pencil stroke" filter, subtle CSS micro-animations.
 
 ## Pages
 
@@ -31,9 +31,13 @@ An open source NPM library that simplifies building APIs for MMORPG servers, wri
 - **npm**: https://www.npmjs.com/package/dragons-of-legends.js
 - **Repository**: https://github.com/Martin92yt/DragonsOfLegends.js
 
+### Dragons RPG
+
+An open source Discord bot built with `dragons-of-legends.js`, my own library. The source code is available.
+
 ### This portfolio
 
-Hand-coded in HTML and CSS, focused on minimalism and performance. Source code: https://github.com/Martin92yt/me
+Built in HTML and CSS, focused on minimalism and performance. Source code: https://github.com/Martin92yt/me
 
 ## Technical highlights
 
@@ -43,7 +47,7 @@ Hand-coded in HTML and CSS, focused on minimalism and performance. Source code: 
 - Inline SVG sprite (`<symbol>` + `<use>`) and a "pencil stroke" filter (`feTurbulence` + `feDisplacementMap`)
 - Honors `prefers-reduced-motion`
 - Responsive from 320 px to 1440 px
-- All pages share the same stylesheet, fonts and hand-drawn icon style
+- All pages share the same stylesheet, fonts and SVG icon style
 - Fonts and images are served with the site: no third-party service is called when a page loads
 
 ## Project structure
@@ -72,6 +76,7 @@ Hand-coded in HTML and CSS, focused on minimalism and performance. Source code: 
     └── projects/
         ├── gifuto.png
         ├── dragons-of-legends.png
+        ├── dragons-rpg.png
         └── portfolio.png
 ```
 

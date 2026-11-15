@@ -2,9 +2,9 @@
 
 🇬🇧 [English version](README.md)
 
-Mon portfolio personnel, écrit **à la main** en HTML5 et CSS3 pur : pas de framework, pas de bibliothèque, presque pas de JavaScript.
+Mon portfolio personnel en HTML5 et CSS3 pur : pas de framework, pas de bibliothèque, presque pas de JavaScript. Je vibe-code : je pilote mes projets et l'IA m'aide à écrire le code.
 
-Direction artistique « artisan-coder » : fond sombre, accent orange, icônes SVG dessinées à la main, petites animations CSS discrètes.
+Direction artistique : fond sombre, accent orange, icônes SVG avec un filtre « trait de crayon », petites animations CSS discrètes.
 
 ## Pages
 
@@ -31,9 +31,13 @@ Une librairie NPM open source qui simplifie la création d'APIs pour serveurs MM
 - **npm** : https://www.npmjs.com/package/dragons-of-legends.js
 - **Dépôt** : https://github.com/Martin92yt/DragonsOfLegends.js
 
+### Dragons RPG
+
+Un bot Discord open source construit avec `dragons-of-legends.js`, ma propre librairie. Le code source est disponible.
+
 ### Ce portfolio
 
-Codé à la main en HTML et CSS, axé sur le minimalisme et la performance. Code source : https://github.com/Martin92yt/me
+Construit en HTML et CSS, axé sur le minimalisme et la performance. Code source : https://github.com/Martin92yt/me
 
 ## Particularités techniques
 
@@ -72,6 +76,7 @@ Codé à la main en HTML et CSS, axé sur le minimalisme et la performance. Code
     └── projects/
         ├── gifuto.png
         ├── dragons-of-legends.png
+        ├── dragons-rpg.png
         └── portfolio.png
 ```
 
